@@ -3,8 +3,8 @@
     "rank": 1,
     "foto": "https://lh3.googleusercontent.com/d/1I9zHbh7UQjw0G8E62BgBM-T1SJ2_phxh",
     "hunter": "Deborah Reynaldo",
-    "recebido": 835210.2100000001,
-    "provisionado": 1343863.11,
+    "recebido": 835210.21,
+    "provisionado": 1343863.1099999999,
     "realizado": 0.6214994695404653
   },
   {
@@ -12,31 +12,31 @@
     "foto": "https://lh3.googleusercontent.com/d/1llI2R5YQCzsm-1BBgujAiSEKAosLtIas",
     "hunter": "Eric de Paula",
     "recebido": 742468.5299999999,
-    "provisionado": 1211691.9700000002,
-    "realizado": 0.6127535284400702
+    "provisionado": 1211691.97,
+    "realizado": 0.6127535284400704
   },
   {
     "rank": 3,
     "foto": "https://lh3.googleusercontent.com/d/1fOojkC6HIy2p62LNsCSIPoT2uDkcoa_Y",
     "hunter": "Izabela Mattano",
     "recebido": 674278.0599999999,
-    "provisionado": 1152755.1199999999,
-    "realizado": 0.5849274041827721
+    "provisionado": 1152755.12,
+    "realizado": 0.584927404182772
   },
   {
     "rank": 4,
     "foto": "https://lh3.googleusercontent.com/d/1PRm-1_2A2mcj4OLwwEW2lBFYT166eAzc",
     "hunter": "Bruno Ferreira",
-    "recebido": 600625.82,
+    "recebido": 600625.8200000001,
     "provisionado": 1042485.54,
-    "realizado": 0.5761478667608185
+    "realizado": 0.5761478667608186
   },
   {
     "rank": 5,
     "foto": "https://lh3.googleusercontent.com/d/1lbvSP_l1b1DxtEhbz0ix8g83DKh2qEq0",
     "hunter": "Gerson Xavier",
     "recebido": 521795.91000000003,
-    "provisionado": 1034561.9099999999,
-    "realizado": 0.5043641225878885
+    "provisionado": 1034561.91,
+    "realizado": 0.5043641225878884
   }
 ]
