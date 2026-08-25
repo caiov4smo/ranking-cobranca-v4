@@ -14,7 +14,10 @@
             --border: #1a1a1a;
             --text-main: #ffffff;
             --text-muted: #777777;
-            --green: #22c55e;
+            --green: #52cc5a; 
+            --green-glow: rgba(82, 204, 90, 0.4);
+            --gold-v4: #ffc02a;
+            --gold-v4-glow: rgba(255, 192, 42, 0.25);
             --silver: #e2e8f0;
             --bronze: #cd7f32;
         }
@@ -88,7 +91,7 @@
             object-fit: contain; 
         }
 
-        /* Layout Principal 25% / 75% */
+        /* Layout Principal 20% / 80% */
         .main-content {
             display: flex;
             gap: 1.5vw;
@@ -97,88 +100,92 @@
             padding-bottom: 1vh;
         }
 
+        /* LATERAL ESQUERDA (Destaques) */
         .left-panel {
-            width: 25%;
+            width: 20%;
             flex-shrink: 0;
             display: flex;
             flex-direction: column;
+            gap: 1.5vh;
         }
 
+        .highlight-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-top: 4px solid var(--gold-v4);
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            min-height: 0;
+        }
+
+        .highlight-header {
+            background: #111;
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .highlight-header h2 {
+            margin: 0;
+            color: var(--gold-v4);
+            font-size: 0.95em;
+            font-weight: 900;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .highlight-body {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 10px;
+            background: linear-gradient(180deg, rgba(255,192,42,0.05) 0%, #050505 100%);
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .highlight-avatar {
+            width: 80px;
+            height: 80px;
+            object-fit: cover;
+            border: 2px solid var(--gold-v4);
+            margin-bottom: 10px;
+            box-shadow: 0 5px 15px var(--gold-v4-glow);
+        }
+
+        .highlight-name {
+            font-size: 1.1em;
+            font-weight: 900;
+            margin-bottom: 6px;
+            text-transform: uppercase;
+        }
+
+        .highlight-label {
+            color: var(--text-muted);
+            font-size: 0.75em;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 4px;
+        }
+
+        .highlight-val {
+            font-size: 1.4em;
+            font-weight: 900;
+            color: var(--green);
+        }
+
+        /* LATERAL DIREITA */
         .right-panel {
-            width: 75%;
+            width: 80%;
             display: flex;
             flex-direction: column;
             flex-grow: 1;
             min-width: 0;
-        }
-
-        /* CARD DESTAQUE */
-        .yesterday-card {
-            background: var(--card-bg);
-            border: 1px solid var(--border);
-            border-top: 4px solid var(--v4-red);
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .yesterday-header {
-            background: #111;
-            padding: 15px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-            border-bottom: 1px solid var(--border);
-        }
-
-        .yesterday-header h2 {
-            margin: 0;
-            color: var(--v4-red);
-            font-size: 1.2em;
-            font-weight: 900;
-            letter-spacing: 1px;
-        }
-
-        .yesterday-body {
-            flex-grow: 1;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            padding: 20px;
-            background: linear-gradient(180deg, rgba(237,28,36,0.05) 0%, #050505 100%);
-            text-align: center;
-        }
-
-        .yesterday-avatar {
-            width: 140px;
-            height: 140px;
-            object-fit: cover;
-            border: 3px solid var(--v4-red);
-            margin-bottom: 25px;
-            box-shadow: 0 10px 25px var(--v4-red-glow);
-        }
-
-        .yesterday-name {
-            font-size: 1.6em;
-            font-weight: 900;
-            margin-bottom: 20px;
-            text-transform: uppercase;
-        }
-
-        .yesterday-label {
-            color: var(--text-muted);
-            font-size: 0.85em;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            margin-bottom: 5px;
-        }
-
-        .yesterday-val {
-            font-size: 2.2em;
-            font-weight: 900;
-            color: var(--green);
         }
 
         /* KPIs */
@@ -195,6 +202,9 @@
             padding: 2vh 20px;
             border: 1px solid var(--border);
             border-left: 3px solid var(--v4-red);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
         }
 
         .kpi-card span {
@@ -210,6 +220,34 @@
         .kpi-card strong {
             font-size: 1.6em;
             font-weight: 900;
+        }
+
+        /* Card Visual do Realizado Geral */
+        .kpi-card-realizado {
+            position: relative;
+        }
+
+        .kpi-realizado-content {
+            display: flex;
+            align-items: baseline;
+            justify-content: space-between;
+            margin-bottom: 8px;
+        }
+
+        .kpi-bar-overall-bg {
+            background: #1a1a1a;
+            height: 8px;
+            width: 100%;
+            overflow: hidden;
+            border: 1px solid #222;
+        }
+
+        .kpi-bar-overall-fill {
+            background: linear-gradient(90deg, var(--v4-red) 0%, var(--green) 100%);
+            height: 100%;
+            width: 0%;
+            transition: width 0.8s ease-in-out;
+            box-shadow: 0 0 12px var(--v4-red-glow);
         }
 
         /* Pódio (Top 3) */
@@ -231,10 +269,34 @@
             flex-direction: column;
             align-items: center;
             justify-content: space-between;
-            padding: 25px 12px 15px;
+            padding: 35px 12px 15px;
             position: relative;
             text-align: center;
             transition: transform 0.3s ease;
+        }
+
+        .step-1 { 
+            order: 2; 
+            height: 31vh; 
+            min-height: 290px;
+            border-top: 4px solid var(--v4-red); 
+            box-shadow: 0 -15px 40px var(--v4-red-glow);
+            z-index: 2;
+            padding-top: 40px;
+        }
+        
+        .step-2 { 
+            order: 1; 
+            height: 27vh; 
+            min-height: 260px;
+            border-top: 4px solid var(--silver); 
+        }
+
+        .step-3 { 
+            order: 3; 
+            height: 25vh; 
+            min-height: 240px;
+            border-top: 4px solid var(--bronze); 
         }
 
         .podium-step:hover { transform: translateY(-5px); }
@@ -248,31 +310,8 @@
             flex-shrink: 0;
         }
 
-        .step-1 { 
-            order: 2; 
-            height: 31vh; 
-            min-height: 290px;
-            border-top: 4px solid var(--v4-red); 
-            box-shadow: 0 -15px 40px var(--v4-red-glow);
-            z-index: 2;
-        }
         .step-1 .podium-avatar { width: 85px; height: 85px; border-color: var(--v4-red); }
-        .step-1 .hunter-name { font-size: 1.25em; color: var(--v4-red); }
-        
-        .step-2 { 
-            order: 1; 
-            height: 27vh; 
-            min-height: 260px;
-            border-top: 4px solid var(--silver); 
-        }
         .step-2 .podium-avatar { border-color: var(--silver); }
-
-        .step-3 { 
-            order: 3; 
-            height: 25vh; 
-            min-height: 240px;
-            border-top: 4px solid var(--bronze); 
-        }
         .step-3 .podium-avatar { border-color: var(--bronze); }
 
         .podium-badge {
@@ -306,6 +345,8 @@
             text-overflow: ellipsis;
         }
 
+        .step-1 .hunter-name { font-size: 1.25em; color: var(--v4-red); }
+
         .podium-val {
             font-size: 1.2em;
             font-weight: 900;
@@ -330,7 +371,7 @@
         }
         .step-1 .podium-pct { color: #fff; background: var(--v4-red); }
 
-        /* Lista (4º em diante) */
+        /* Lista Mola (4º em diante) */
         .ranking-list {
             flex-grow: 1;
             display: flex;
@@ -463,18 +504,29 @@
 
         <div class="main-content">
             
-            <!-- LATERAL ESQUERDA -->
+            <!-- LATERAL ESQUERDA (Destaques) -->
             <div class="left-panel">
-                <div class="yesterday-card">
-                    <div class="yesterday-header">
-                        <span style="font-size: 1.2em;">🔥</span>
+                <div class="highlight-card">
+                    <div class="highlight-header">
                         <h2>DESTAQUE DE ONTEM</h2>
                     </div>
-                    <div class="yesterday-body">
-                        <img id="yesterday-avatar" class="yesterday-avatar" src="https://via.placeholder.com/150" alt="Hunter Destaque">
-                        <div id="yesterday-name" class="yesterday-name">-</div>
-                        <div class="yesterday-label">Total Recebido</div>
-                        <div id="yesterday-val" class="yesterday-val">R$ 0,00</div>
+                    <div class="highlight-body">
+                        <img id="yesterday-avatar" class="highlight-avatar" src="https://via.placeholder.com/150" alt="Destaque Ontem">
+                        <div id="yesterday-name" class="highlight-name">-</div>
+                        <div class="highlight-label">Total Recebido</div>
+                        <div id="yesterday-val" class="highlight-val">R$ 0,00</div>
+                    </div>
+                </div>
+
+                <div class="highlight-card">
+                    <div class="highlight-header">
+                        <h2>DESTAQUE DA SEMANA</h2>
+                    </div>
+                    <div class="highlight-body">
+                        <img id="week-avatar" class="highlight-avatar" src="https://via.placeholder.com/150" alt="Destaque Semana">
+                        <div id="week-name" class="highlight-name">-</div>
+                        <div class="highlight-label">Total Recebido</div>
+                        <div id="week-val" class="highlight-val">R$ 0,00</div>
                     </div>
                 </div>
             </div>
@@ -490,9 +542,16 @@
                         <span>Meta</span>
                         <strong id="kpi-provisionado">R$ 0,00</strong>
                     </div>
-                    <div class="kpi-card">
+                    
+                    <!-- KPI Realizado Geral com Barra Visual de Progresso -->
+                    <div class="kpi-card kpi-card-realizado">
                         <span>Realizado Geral</span>
-                        <strong id="kpi-realizado" style="color: var(--v4-red);">0%</strong>
+                        <div class="kpi-realizado-content">
+                            <strong id="kpi-realizado" style="color: var(--green);">0%</strong>
+                        </div>
+                        <div class="kpi-bar-overall-bg">
+                            <div class="kpi-bar-overall-fill" id="kpi-overall-fill"></div>
+                        </div>
                     </div>
                 </div>
 
@@ -525,7 +584,6 @@
                 let dataRanking = [];
                 let dataOntem = [];
 
-                // Tenta puxar o ranking principal
                 try {
                     const resRank = await fetch(DATA_URL_RANKING);
                     dataRanking = await resRank.json();
@@ -533,7 +591,6 @@
                     console.error("Erro ao carregar dados do ranking principal:", e);
                 }
 
-                // Tenta puxar o destaque de ontem (separado, se falhar não quebra o ranking)
                 try {
                     const resOntem = await fetch(DATA_URL_ONTEM);
                     dataOntem = await resOntem.json();
@@ -541,18 +598,28 @@
                     console.error("Erro ao carregar dados do dia anterior:", e);
                 }
 
-                // --- 1. Preenche o Destaque de Ontem ---
+                // Destaques
                 if (dataOntem && dataOntem.length > 0) {
-                    const topOntem = dataOntem[0];
-                    document.getElementById('yesterday-name').innerText = topOntem.top_hunter_ontem;
-                    document.getElementById('yesterday-val').innerText = formatBRL(parseNumber(topOntem.recebido_ontem_val));
-                    document.getElementById('yesterday-avatar').src = topOntem.foto || 'https://via.placeholder.com/150';
-                } else {
-                    document.getElementById('yesterday-name').innerText = 'Sem Pagamentos';
-                    document.getElementById('yesterday-val').innerText = 'R$ 0,00';
+                    const tops = dataOntem[0];
+                    
+                    const nomeOntem = tops.top_hunter_ontem || 'Sem Pagamentos';
+                    const valorOntem = parseNumber(tops.recebido_ontem_val);
+                    const hunterOntemObj = dataRanking.find(d => d.hunter === nomeOntem);
+                    
+                    document.getElementById('yesterday-name').innerText = nomeOntem;
+                    document.getElementById('yesterday-val').innerText = formatBRL(valorOntem);
+                    document.getElementById('yesterday-avatar').src = hunterOntemObj ? hunterOntemObj.foto : 'https://via.placeholder.com/150';
+
+                    const nomeSemana = tops.top_hunter_semana || 'Sem Pagamentos';
+                    const valorSemana = parseNumber(tops.recebido_semana_val);
+                    const hunterSemanaObj = dataRanking.find(d => d.hunter === nomeSemana);
+                    
+                    document.getElementById('week-name').innerText = nomeSemana;
+                    document.getElementById('week-val').innerText = formatBRL(valorSemana);
+                    document.getElementById('week-avatar').src = hunterSemanaObj ? hunterSemanaObj.foto : 'https://via.placeholder.com/150';
                 }
 
-                // --- 2. Preenche o Ranking Geral ---
+                // Ranking Geral
                 const podiumContainer = document.getElementById('podium-container');
                 const othersContainer = document.getElementById('others-container');
                 podiumContainer.innerHTML = '';
@@ -613,8 +680,19 @@
 
                 document.getElementById('kpi-recebido').innerText = formatBRL(totalRecebido);
                 document.getElementById('kpi-provisionado').innerText = formatBRL(totalProvisionado);
+                
+                // Atualização do KPI Geral + Barra Visual
                 const pctGeral = totalProvisionado > 0 ? (totalRecebido / totalProvisionado) * 100 : 0;
                 document.getElementById('kpi-realizado').innerText = `${pctGeral.toFixed(2)}%`;
+                
+                const fillBar = document.getElementById('kpi-overall-fill');
+                fillBar.style.width = `${Math.min(pctGeral, 100)}%`;
+                
+                // Ajusta cor conforme aproxima da meta
+                if (pctGeral >= 100) {
+                    fillBar.style.background = 'var(--green)';
+                    fillBar.style.boxShadow = '0 0 15px var(--green-glow)';
+                }
 
             } catch (err) {
                 console.error("Erro geral no sistema:", err);
