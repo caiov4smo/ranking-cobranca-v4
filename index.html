@@ -43,13 +43,13 @@
 
         .container {
             width: 100%;
-            max-width: 1400px;
+            max-width: 1700px;
             height: 100%;
             display: flex;
             flex-direction: column;
         }
 
-        /* Header com Mês + Logo à direita */
+        /* Header */
         .header {
             flex-shrink: 0;
             display: flex;
@@ -57,7 +57,7 @@
             align-items: center;
             border-bottom: 2px solid var(--v4-red);
             padding-bottom: 1.5vh;
-            margin-bottom: 3vh;
+            margin-bottom: 2.5vh;
         }
 
         .header h1 {
@@ -86,6 +86,99 @@
         .logo-v4 { 
             height: 42px; 
             object-fit: contain; 
+        }
+
+        /* Layout Principal 25% / 75% */
+        .main-content {
+            display: flex;
+            gap: 1.5vw;
+            flex-grow: 1;
+            min-height: 0;
+            padding-bottom: 1vh;
+        }
+
+        .left-panel {
+            width: 25%;
+            flex-shrink: 0;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .right-panel {
+            width: 75%;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+            min-width: 0;
+        }
+
+        /* CARD DESTAQUE */
+        .yesterday-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-top: 4px solid var(--v4-red);
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .yesterday-header {
+            background: #111;
+            padding: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .yesterday-header h2 {
+            margin: 0;
+            color: var(--v4-red);
+            font-size: 1.2em;
+            font-weight: 900;
+            letter-spacing: 1px;
+        }
+
+        .yesterday-body {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            background: linear-gradient(180deg, rgba(237,28,36,0.05) 0%, #050505 100%);
+            text-align: center;
+        }
+
+        .yesterday-avatar {
+            width: 140px;
+            height: 140px;
+            object-fit: cover;
+            border: 3px solid var(--v4-red);
+            margin-bottom: 25px;
+            box-shadow: 0 10px 25px var(--v4-red-glow);
+        }
+
+        .yesterday-name {
+            font-size: 1.6em;
+            font-weight: 900;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+
+        .yesterday-label {
+            color: var(--text-muted);
+            font-size: 0.85em;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 5px;
+        }
+
+        .yesterday-val {
+            font-size: 2.2em;
+            font-weight: 900;
+            color: var(--green);
         }
 
         /* KPIs */
@@ -119,7 +212,7 @@
             font-weight: 900;
         }
 
-        /* Pódio (Top 3) - Alturas ajustadas para evitar sobreposição de nomes */
+        /* Pódio (Top 3) */
         .podium-wrapper {
             flex-shrink: 0;
             display: flex;
@@ -237,7 +330,7 @@
         }
         .step-1 .podium-pct { color: #fff; background: var(--v4-red); }
 
-        /* Lista Mola (4º em diante) */
+        /* Lista (4º em diante) */
         .ranking-list {
             flex-grow: 1;
             display: flex;
@@ -295,7 +388,7 @@
 
         .info-list {
             flex-grow: 1;
-            min-width: 200px;
+            min-width: 150px;
         }
 
         .progress-row {
@@ -359,7 +452,7 @@
 <body>
 
     <div class="container">
-        <!-- Header: Título à esquerda / Mês + Logo à direita -->
+        <!-- Header -->
         <div class="header">
             <h1>RANKING COBRANÇA</h1>
             <div class="header-right">
@@ -368,31 +461,51 @@
             </div>
         </div>
 
-        <!-- KPIs -->
-        <div class="kpi-grid">
-            <div class="kpi-card">
-                <span>Realizado</span>
-                <strong id="kpi-recebido" style="color: var(--green);">R$ 0,00</strong>
+        <div class="main-content">
+            
+            <!-- LATERAL ESQUERDA -->
+            <div class="left-panel">
+                <div class="yesterday-card">
+                    <div class="yesterday-header">
+                        <span style="font-size: 1.2em;">🔥</span>
+                        <h2>DESTAQUE DE ONTEM</h2>
+                    </div>
+                    <div class="yesterday-body">
+                        <img id="yesterday-avatar" class="yesterday-avatar" src="https://via.placeholder.com/150" alt="Hunter Destaque">
+                        <div id="yesterday-name" class="yesterday-name">-</div>
+                        <div class="yesterday-label">Total Recebido</div>
+                        <div id="yesterday-val" class="yesterday-val">R$ 0,00</div>
+                    </div>
+                </div>
             </div>
-            <div class="kpi-card">
-                <span>Meta</span>
-                <strong id="kpi-provisionado">R$ 0,00</strong>
+
+            <!-- LATERAL DIREITA -->
+            <div class="right-panel">
+                <div class="kpi-grid">
+                    <div class="kpi-card">
+                        <span>Realizado</span>
+                        <strong id="kpi-recebido" style="color: var(--green);">R$ 0,00</strong>
+                    </div>
+                    <div class="kpi-card">
+                        <span>Meta</span>
+                        <strong id="kpi-provisionado">R$ 0,00</strong>
+                    </div>
+                    <div class="kpi-card">
+                        <span>Realizado Geral</span>
+                        <strong id="kpi-realizado" style="color: var(--v4-red);">0%</strong>
+                    </div>
+                </div>
+
+                <div class="podium-wrapper" id="podium-container"></div>
+                <div class="ranking-list" id="others-container"></div>
             </div>
-            <div class="kpi-card">
-                <span>Realizado Geral</span>
-                <strong id="kpi-realizado" style="color: var(--v4-red);">0%</strong>
-            </div>
+
         </div>
-
-        <!-- Pódio (Top 3) -->
-        <div class="podium-wrapper" id="podium-container"></div>
-
-        <!-- Lista Mola (4º em diante) -->
-        <div class="ranking-list" id="others-container"></div>
     </div>
 
     <script>
-        const DATA_URL = './dados.json';
+        const DATA_URL_RANKING = './dados.json';
+        const DATA_URL_ONTEM = './dados2.json';
 
         const mesExtenso = new Date().toLocaleDateString('pt-BR', { month: 'long', year: 'numeric' }).toUpperCase();
         document.getElementById('mes-atual').innerText = mesExtenso;
@@ -409,9 +522,37 @@
 
         async function render() {
             try {
-                const res = await fetch(DATA_URL);
-                const data = await res.json();
+                let dataRanking = [];
+                let dataOntem = [];
 
+                // Tenta puxar o ranking principal
+                try {
+                    const resRank = await fetch(DATA_URL_RANKING);
+                    dataRanking = await resRank.json();
+                } catch (e) {
+                    console.error("Erro ao carregar dados do ranking principal:", e);
+                }
+
+                // Tenta puxar o destaque de ontem (separado, se falhar não quebra o ranking)
+                try {
+                    const resOntem = await fetch(DATA_URL_ONTEM);
+                    dataOntem = await resOntem.json();
+                } catch (e) {
+                    console.error("Erro ao carregar dados do dia anterior:", e);
+                }
+
+                // --- 1. Preenche o Destaque de Ontem ---
+                if (dataOntem && dataOntem.length > 0) {
+                    const topOntem = dataOntem[0];
+                    document.getElementById('yesterday-name').innerText = topOntem.top_hunter_ontem;
+                    document.getElementById('yesterday-val').innerText = formatBRL(parseNumber(topOntem.recebido_ontem_val));
+                    document.getElementById('yesterday-avatar').src = topOntem.foto || 'https://via.placeholder.com/150';
+                } else {
+                    document.getElementById('yesterday-name').innerText = 'Sem Pagamentos';
+                    document.getElementById('yesterday-val').innerText = 'R$ 0,00';
+                }
+
+                // --- 2. Preenche o Ranking Geral ---
                 const podiumContainer = document.getElementById('podium-container');
                 const othersContainer = document.getElementById('others-container');
                 podiumContainer.innerHTML = '';
@@ -420,7 +561,7 @@
                 let totalRecebido = 0;
                 let totalProvisionado = 0;
 
-                data.forEach((item, index) => {
+                dataRanking.forEach((item, index) => {
                     const recebido = parseNumber(item.recebido);
                     const provisionado = parseNumber(item.provisionado);
                     let realizado = parseNumber(item.realizado);
@@ -476,7 +617,7 @@
                 document.getElementById('kpi-realizado').innerText = `${pctGeral.toFixed(2)}%`;
 
             } catch (err) {
-                console.error("Erro ao carregar ranking:", err);
+                console.error("Erro geral no sistema:", err);
             }
         }
 
