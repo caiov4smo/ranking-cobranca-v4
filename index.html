@@ -35,7 +35,6 @@
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
         }
 
-        /* O novo contêiner mestre que divide a tela em Esquerda (Conteúdo) e Direita (Foguete) */
         .dashboard-layout {
             display: flex;
             height: 100vh;
@@ -46,7 +45,7 @@
             margin: 0 auto;
         }
 
-        /* ======= COLUNA ESQUERDA (70%) ======= */
+        /* COLUNA ESQUERDA (70%) */
         .col-left {
             flex: 0 0 70%;
             display: flex;
@@ -54,7 +53,6 @@
             height: 100%;
         }
 
-        /* Header */
         .header {
             flex-shrink: 0;
             display: flex;
@@ -88,7 +86,6 @@
             text-transform: uppercase;
         }
 
-        /* KPIs de Valor (Agora só 2 colunas, pois a % foi pra direita) */
         .kpi-grid {
             flex-shrink: 0;
             display: grid;
@@ -119,7 +116,6 @@
             font-weight: 900;
         }
 
-        /* Pódio (Top 3) */
         .podium-wrapper {
             flex-shrink: 0;
             display: flex;
@@ -174,7 +170,6 @@
         .podium-pct { font-size: 0.85em; font-weight: 800; color: var(--text-muted); background: #1a1a1a; padding: 4px 12px; }
         .step-1 .podium-pct { color: #fff; background: var(--v4-red); }
 
-        /* Lista (4º em diante) */
         .ranking-list { flex-grow: 1; display: flex; flex-direction: column; justify-content: space-evenly; gap: 1vh; overflow-y: auto; padding-right: 10px; }
         .ranking-list::-webkit-scrollbar { width: 6px; }
         .ranking-list::-webkit-scrollbar-track { background: transparent; }
@@ -197,10 +192,9 @@
         .val-divider { color: #333; font-weight: 800; text-align: center; }
         .val-provisionado-list { font-size: 0.75em; font-weight: 700; color: var(--text-muted); text-transform: uppercase; text-align: left; }
 
-
-        /* ======= COLUNA DIREITA (30%) - O FOGUETE ======= */
+        /* COLUNA DIREITA (FOGUETE + LOGO TRAVADA) */
         .col-right {
-            flex: 0 0 28%; /* Pegando quase 30% da tela */
+            flex: 0 0 28%;
             display: flex;
             flex-direction: column;
             background: var(--card-bg);
@@ -211,12 +205,11 @@
             border-top: 4px solid var(--v4-red);
         }
 
-        /* Área do Título e Logo */
         .rocket-header {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 20px;
+            padding: 15px 20px;
             background: rgba(0,0,0,0.5);
             border-bottom: 1px solid var(--border);
             z-index: 10;
@@ -230,7 +223,13 @@
             font-weight: 800;
         }
 
-        /* O container mestre da imagem */
+        /* Trava da Logo da V4 no topo direito */
+        .rocket-header img {
+            max-height: 35px;
+            width: auto;
+            object-fit: contain;
+        }
+
         .rocket-container {
             flex-grow: 1;
             position: relative;
@@ -240,60 +239,57 @@
             padding: 20px;
         }
 
-        /* A imagem esfumaçada no fundo (Preto e branco, pouca opacidade) */
+        /* Foguete Esfumaçado */
         .rocket-ghost {
             position: absolute;
-            height: 85%;
+            height: 80%;
             width: auto;
             object-fit: contain;
-            opacity: 0.15;
+            opacity: 0.12;
             filter: grayscale(100%);
             z-index: 1;
         }
 
-        /* A imagem colorida (O "Combustível") */
+        /* Foguete Colorido Preenchendo */
         .rocket-color {
             position: absolute;
-            height: 85%;
+            height: 80%;
             width: auto;
             object-fit: contain;
             z-index: 2;
-            /* O pulo do gato: A imagem colorida é "cortada" por baixo via JavaScript dependendo da % */
             clip-path: inset(100% 0 0 0); 
             transition: clip-path 1.5s cubic-bezier(0.4, 0, 0.2, 1);
-            filter: drop-shadow(0 0 20px var(--v4-red-glow));
+            filter: drop-shadow(0 0 25px var(--v4-red-glow));
         }
 
-        /* O Texto gigante com a porcentagem rodando solto em cima da imagem */
         .rocket-pct-text {
             position: absolute;
-            bottom: 30px;
+            bottom: 25px;
             left: 0;
             width: 100%;
             text-align: center;
-            font-size: 5.5em;
+            font-size: 5em;
             font-weight: 900;
             color: #fff;
-            text-shadow: 0 0 30px rgba(0,0,0,0.9), 0 5px 10px rgba(0,0,0,0.8);
+            text-shadow: 0 0 25px rgba(0,0,0,0.9), 0 5px 10px rgba(0,0,0,0.9);
             z-index: 10;
         }
         
         .rocket-pct-text span {
-            font-size: 0.3em;
+            font-size: 0.25em;
             display: block;
             color: var(--v4-red);
             text-transform: uppercase;
-            letter-spacing: 4px;
-            margin-bottom: -15px;
+            letter-spacing: 3px;
+            margin-bottom: -10px;
         }
-
     </style>
 </head>
 <body>
 
     <div class="dashboard-layout">
         
-        <!-- ESQUERDA (Tabela de Líderes) -->
+        <!-- ESQUERDA -->
         <div class="col-left">
             <div class="header">
                 <h1>RANKING COBRANÇA</h1>
@@ -302,7 +298,6 @@
                 </div>
             </div>
 
-            <!-- KPIs -->
             <div class="kpi-grid">
                 <div class="kpi-card">
                     <span>Realizado</span>
@@ -314,25 +309,21 @@
                 </div>
             </div>
 
-            <!-- Pódio -->
             <div class="podium-wrapper" id="podium-container"></div>
-
-            <!-- Lista -->
             <div class="ranking-list" id="others-container"></div>
         </div>
 
-
-        <!-- DIREITA (Meta Global Foguete) -->
+        <!-- DIREITA -->
         <div class="col-right">
             <div class="rocket-header">
                 <span>Realizado Geral</span>
-                <img src="./logo-v4.jpg" class="logo-v4" alt="V4" onerror="this.style.display='none'">
+                <img src="./logo-v4.jpg" alt="V4" onerror="this.style.display='none'">
             </div>
             
             <div class="rocket-container">
-                <!-- Certifique-se de subir uma imagem chamada foguete.png no mesmo diretório -->
-                <img src="./foguete.png" class="rocket-ghost" onerror="this.src='https://cdn-icons-png.flaticon.com/512/3256/3256083.png'">
-                <img src="./foguete.png" class="rocket-color" id="rocket-fill" onerror="this.src='https://cdn-icons-png.flaticon.com/512/3256/3256083.png'">
+                <!-- Reserva apontando direto para um ícone PNG de foguete -->
+                <img src="./foguete.png" class="rocket-ghost" onerror="this.src='https://cdn-icons-png.flaticon.com/512/1356/1356479.png'">
+                <img src="./foguete.png" class="rocket-color" id="rocket-fill" onerror="this.src='https://cdn-icons-png.flaticon.com/512/1356/1356479.png'">
                 
                 <div class="rocket-pct-text">
                     <span>Atingimento</span>
@@ -422,19 +413,16 @@
                     }
                 });
 
-                // Atualiza KPIs Financeiros
                 document.getElementById('kpi-recebido').innerText = formatBRL(totalRecebido);
                 document.getElementById('kpi-provisionado').innerText = formatBRL(totalProvisionado);
                 
-                // Calcula e atualiza Foguete
                 const pctGeral = totalProvisionado > 0 ? (totalRecebido / totalProvisionado) * 100 : 0;
                 document.getElementById('kpi-realizado').innerText = `${pctGeral.toFixed(2)}%`;
                 
-                // Animação de Subida do Foguete (Cortando de cima para baixo. Ex: Se tem 60%, a margem superior do corte é 40%)
                 const corteSuperior = 100 - Math.min(pctGeral, 100);
                 setTimeout(() => {
                     document.getElementById('rocket-fill').style.clipPath = `inset(${corteSuperior}% 0 0 0)`;
-                }, 100); // pequeno atraso para a animação disparar após o carregamento
+                }, 100);
 
             } catch (err) {
                 console.error("Erro ao carregar ranking:", err);
