@@ -3,24 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ranking Hunters - V4 Company</title>
+    <title>Ranking Cobrança - V4 Company</title>
     <meta http-equiv="refresh" content="600">
     <style>
         :root {
             --bg: #030303;
             --card-bg: #0a0a0a;
             --v4-red: #ed1c24;
-            --v4-red-glow: rgba(237, 28, 36, 0.5);
+            --v4-red-glow: rgba(237, 28, 36, 0.4);
             --border: #1a1a1a;
             --text-main: #ffffff;
             --text-muted: #777777;
             --green: #22c55e;
-            --gold: #ffd700;
             --silver: #e2e8f0;
             --bronze: #cd7f32;
         }
 
-        /* Zera cantos arredondados em toda a aplicação (Sharp Edges) */
         * {
             box-sizing: border-box;
             border-radius: 0px !important;
@@ -38,10 +36,10 @@
 
         .container {
             width: 100%;
-            max-width: 950px;
+            max-width: 980px;
         }
 
-        /* Top Header com Logo à direita */
+        /* Header */
         .header {
             display: flex;
             justify-content: space-between;
@@ -53,27 +51,25 @@
 
         .header h1 {
             margin: 0;
-            font-size: 2.2em;
+            font-size: 2em;
             font-weight: 900;
             letter-spacing: -1px;
             text-transform: uppercase;
+            color: var(--text-main);
         }
 
-        .header h1 span {
-            color: var(--v4-red);
+        .header h1 .highlight-red { 
+            color: var(--v4-red); 
         }
+        
+        .logo-v4 { height: 45px; object-fit: contain; }
 
-        .logo-v4 {
-            height: 45px;
-            object-fit: contain;
-        }
-
-        /* Grid de KPIs */
+        /* KPIs */
         .kpi-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 15px;
-            margin-bottom: 35px;
+            margin-bottom: 40px;
         }
 
         .kpi-card {
@@ -81,7 +77,6 @@
             padding: 18px;
             border: 1px solid var(--border);
             border-left: 3px solid var(--v4-red);
-            text-align: left;
         }
 
         .kpi-card span {
@@ -99,7 +94,109 @@
             font-weight: 900;
         }
 
-        /* Lista de Ranking */
+        /* Pódio (Top 3) */
+        .podium-wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            gap: 15px;
+            margin-bottom: 40px;
+        }
+
+        .podium-step {
+            background: linear-gradient(180deg, #111111 0%, #050505 100%);
+            border: 1px solid var(--border);
+            width: 30%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 22px 15px 15px;
+            position: relative;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .podium-step:hover { transform: translateY(-5px); }
+
+        .podium-avatar {
+            width: 70px;
+            height: 70px;
+            object-fit: cover;
+            border: 2px solid #333;
+            margin-bottom: 12px;
+        }
+
+        .step-1 { 
+            order: 2; 
+            height: 310px; 
+            border-top: 4px solid var(--v4-red); 
+            box-shadow: 0 -15px 40px var(--v4-red-glow);
+            z-index: 2;
+        }
+        .step-1 .podium-avatar { width: 90px; height: 90px; border-color: var(--v4-red); }
+        .step-1 .hunter-name { font-size: 1.3em; color: var(--v4-red); }
+        
+        .step-2 { order: 1; height: 270px; border-top: 4px solid var(--silver); }
+        .step-2 .podium-avatar { border-color: var(--silver); }
+
+        .step-3 { order: 3; height: 250px; border-top: 4px solid var(--bronze); }
+        .step-3 .podium-avatar { border-color: var(--bronze); }
+
+        .podium-badge {
+            position: absolute;
+            top: -20px;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.3em;
+            font-weight: 900;
+            background: #111;
+            border: 2px solid;
+            color: #fff;
+        }
+        .step-1 .podium-badge { border-color: var(--v4-red); background: var(--v4-red); top: -25px; width: 50px; height: 50px; font-size: 1.6em; }
+        .step-2 .podium-badge { border-color: var(--silver); color: var(--silver); }
+        .step-3 .podium-badge { border-color: var(--bronze); color: var(--bronze); }
+
+        .hunter-name {
+            font-weight: 800;
+            font-size: 1.1em;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 4px;
+            width: 100%;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .podium-val {
+            font-size: 1.25em;
+            font-weight: 900;
+            color: var(--green);
+            margin-top: 2px;
+        }
+
+        .podium-prov {
+            font-size: 0.75em;
+            font-weight: 700;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            margin-bottom: 6px;
+        }
+
+        .podium-pct {
+            font-size: 0.85em;
+            font-weight: 800;
+            color: var(--text-muted);
+            background: #1a1a1a;
+            padding: 4px 12px;
+        }
+        .step-1 .podium-pct { color: #fff; background: var(--v4-red); }
+
+        /* Lista (4º em diante) */
         .ranking-list {
             display: flex;
             flex-direction: column;
@@ -108,96 +205,59 @@
 
         .ranking-card {
             background: var(--card-bg);
-            padding: 14px 20px;
+            padding: 12px 20px;
             display: flex;
             align-items: center;
             gap: 18px;
             border: 1px solid var(--border);
             border-left: 4px solid #333;
-            transition: all 0.2s ease;
+            transition: transform 0.2s ease;
         }
 
         .ranking-card:hover {
-            border-color: var(--v4-red);
-            transform: translateX(6px);
+            border-color: #444;
+            transform: translateX(4px);
         }
 
-        /* Estilização Extrema do TOP 3 */
-        .card-top-1 {
-            background: linear-gradient(90deg, rgba(237,28,36,0.15) 0%, #0d0d0d 100%);
-            border: 1px solid var(--v4-red);
-            border-left: 8px solid var(--v4-red);
-            padding: 22px 24px;
-            box-shadow: 0 0 25px var(--v4-red-glow);
-        }
-
-        .card-top-2 {
-            border-left: 6px solid var(--silver);
-            padding: 18px 22px;
-            background: #0f0f0f;
-        }
-
-        .card-top-3 {
-            border-left: 6px solid var(--bronze);
-            padding: 16px 20px;
-            background: #0d0d0d;
-        }
-
-        /* Badges dos Posições */
-        .badge-rank {
-            font-size: 1.2em;
+        .badge-rank-list {
+            font-size: 1.1em;
             font-weight: 900;
-            width: 38px;
-            height: 38px;
+            width: 35px;
+            height: 35px;
             display: flex;
             align-items: center;
             justify-content: center;
             background: #151515;
-            color: #fff;
+            color: var(--text-muted);
             border: 1px solid #333;
+            flex-shrink: 0;
         }
 
-        .badge-1 { background: var(--v4-red); color: #fff; border: none; font-size: 1.4em; }
-        .badge-2 { background: var(--silver); color: #000; border: none; }
-        .badge-3 { background: var(--bronze); color: #fff; border: none; }
-
-        /* Fotos em Quadrado (Sharp) */
-        .avatar {
-            width: 48px;
-            height: 48px;
+        .avatar-list {
+            width: 45px;
+            height: 45px;
             object-fit: cover;
-            border: 1px solid var(--border);
+            border: 1px solid #333;
+            flex-shrink: 0;
         }
 
-        .card-top-1 .avatar {
-            width: 60px;
-            height: 60px;
-            border: 2px solid var(--v4-red);
-        }
-
-        .hunter-info {
+        .info-list {
             flex-grow: 1;
+            margin-right: 20px;
         }
 
-        .hunter-name {
-            font-weight: 800;
-            font-size: 1.1em;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            margin-bottom: 8px;
+        .progress-row {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-top: 6px;
         }
 
-        .card-top-1 .hunter-name {
-            font-size: 1.3em;
-            color: #fff;
-        }
-
-        /* Barra de Progresso Reta */
         .progress-bar-bg {
             background: #1a1a1a;
             height: 6px;
-            width: 100%;
-            max-width: 250px;
+            flex: 1;
+            max-width: 280px;
             overflow: hidden;
         }
 
@@ -206,51 +266,52 @@
             height: 100%;
         }
 
-        .card-top-1 .progress-bar-fill {
-            box-shadow: 0 0 10px var(--v4-red);
+        .pct-label-side {
+            font-size: 0.85em;
+            font-weight: 800;
+            color: var(--v4-red);
+            white-space: nowrap;
         }
 
-        /* Métricas */
-        .metrics {
-            text-align: right;
-            min-width: 150px;
+        /* Bloco de métricas compacto e fixado 100% no canto direito */
+        .metrics-list {
+            white-space: nowrap;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            flex-shrink: 0;
+            margin-left: auto;
         }
 
-        .val-recebido {
-            font-size: 1.15em;
+        .val-recebido-list {
+            font-size: 1.1em;
             font-weight: 900;
             color: var(--green);
         }
 
-        .card-top-1 .val-recebido {
-            font-size: 1.4em;
+        .val-divider {
+            color: #333;
+            font-weight: 800;
         }
 
-        .val-meta {
-            font-size: 0.75em;
+        .val-provisionado-list {
+            font-size: 0.85em;
+            font-weight: 700;
             color: var(--text-muted);
             text-transform: uppercase;
-            margin-top: 2px;
-        }
-
-        .pct-realizado {
-            font-size: 0.85em;
-            font-weight: 800;
-            color: var(--v4-red);
-            margin-top: 4px;
         }
     </style>
 </head>
 <body>
 
     <div class="container">
-        <!-- Header com Título e Logo -->
+        <!-- Header -->
         <div class="header">
-            <h1>RANKING <span>HUNTERS</span></h1>
+            <h1>RANKING <span class="highlight-red">COBRANÇA</span> <span id="mes-atual"></span></h1>
             <img src="./logo-v4.jpg" class="logo-v4" alt="V4 Company" onerror="this.style.display='none'">
         </div>
 
-        <!-- KPIs Totais -->
+        <!-- KPIs -->
         <div class="kpi-grid">
             <div class="kpi-card">
                 <span>Total Recebido</span>
@@ -266,14 +327,18 @@
             </div>
         </div>
 
-        <!-- Lista do Ranking -->
-        <div class="ranking-list" id="ranking-container">
-            <!-- Inserido dinamicamente -->
-        </div>
+        <!-- Pódio (Top 3) -->
+        <div class="podium-wrapper" id="podium-container"></div>
+
+        <!-- Lista (4º em diante) -->
+        <div class="ranking-list" id="others-container"></div>
     </div>
 
     <script>
         const DATA_URL = './dados.json';
+
+        const mesExtenso = new Date().toLocaleDateString('pt-BR', { month: 'long', year: 'numeric' }).toUpperCase();
+        document.getElementById('mes-atual').innerText = mesExtenso;
 
         function parseNumber(val) {
             if (typeof val === 'number') return val;
@@ -290,8 +355,10 @@
                 const res = await fetch(DATA_URL);
                 const data = await res.json();
 
-                const container = document.getElementById('ranking-container');
-                container.innerHTML = '';
+                const podiumContainer = document.getElementById('podium-container');
+                const othersContainer = document.getElementById('others-container');
+                podiumContainer.innerHTML = '';
+                othersContainer.innerHTML = '';
 
                 let totalRecebido = 0;
                 let totalProvisionado = 0;
@@ -307,41 +374,43 @@
                     totalProvisionado += provisionado;
 
                     const rankPos = item.rank || (index + 1);
-                    
-                    let cardClass = 'ranking-card';
-                    let badgeClass = 'badge-rank';
-
-                    if (rankPos == 1) {
-                        cardClass += ' card-top-1';
-                        badgeClass += ' badge-1';
-                    } else if (rankPos == 2) {
-                        cardClass += ' card-top-2';
-                        badgeClass += ' badge-2';
-                    } else if (rankPos == 3) {
-                        cardClass += ' card-top-3';
-                        badgeClass += ' badge-3';
-                    }
-
                     const avatarUrl = item.foto || 'https://via.placeholder.com/150';
 
-                    const card = document.createElement('div');
-                    card.className = cardClass;
-                    card.innerHTML = `
-                        <div class="${badgeClass}">#${rankPos}</div>
-                        <img src="${avatarUrl}" class="avatar" alt="${item.hunter}">
-                        <div class="hunter-info">
+                    if (rankPos <= 3) {
+                        const step = document.createElement('div');
+                        step.className = `podium-step step-${rankPos}`;
+                        step.innerHTML = `
+                            <div class="podium-badge">${rankPos}º</div>
+                            <img src="${avatarUrl}" class="podium-avatar" alt="${item.hunter}">
                             <div class="hunter-name">${item.hunter}</div>
-                            <div class="progress-bar-bg">
-                                <div class="progress-bar-fill" style="width: ${Math.min(realizado, 100)}%;"></div>
+                            <div class="podium-val">${formatBRL(recebido)}</div>
+                            <div class="podium-prov">${formatBRL(provisionado)}</div>
+                            <div class="podium-pct">${realizado.toFixed(2)}%</div>
+                        `;
+                        podiumContainer.appendChild(step);
+                    } else {
+                        const card = document.createElement('div');
+                        card.className = 'ranking-card';
+                        card.innerHTML = `
+                            <div class="badge-rank-list">${rankPos}</div>
+                            <img src="${avatarUrl}" class="avatar-list" alt="${item.hunter}">
+                            <div class="info-list">
+                                <div class="hunter-name" style="font-size: 1em;">${item.hunter}</div>
+                                <div class="progress-row">
+                                    <div class="progress-bar-bg">
+                                        <div class="progress-bar-fill" style="width: ${Math.min(realizado, 100)}%;"></div>
+                                    </div>
+                                    <span class="pct-label-side">${realizado.toFixed(2)}%</span>
+                                </div>
                             </div>
-                        </div>
-                        <div class="metrics">
-                            <div class="val-recebido">${formatBRL(recebido)}</div>
-                            <div class="val-meta">Meta: ${formatBRL(provisionado)}</div>
-                            <div class="pct-realizado">${realizado.toFixed(2)}% realizado</div>
-                        </div>
-                    `;
-                    container.appendChild(card);
+                            <div class="metrics-list">
+                                <span class="val-recebido-list">${formatBRL(recebido)}</span>
+                                <span class="val-divider">/</span>
+                                <span class="val-provisionado-list">${formatBRL(provisionado)}</span>
+                            </div>
+                        `;
+                        othersContainer.appendChild(card);
+                    }
                 });
 
                 document.getElementById('kpi-recebido').innerText = formatBRL(totalRecebido);
