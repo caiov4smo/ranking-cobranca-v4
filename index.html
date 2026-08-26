@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ranking Cobrança - V4 Company</title>
     <link rel="icon" type="image/png" href="./favicon.png">
+    <title>Ranking Cobrança - V4 Company</title>
     <meta http-equiv="refresh" content="600">
     <style>
         :root {
@@ -269,8 +269,8 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: space-between;
-            padding: 35px 12px 15px;
+            justify-content: flex-start; /* Removido space-between para controle exato */
+            padding: 40px 12px 15px; /* Espaço para a medalha não grudar */
             position: relative;
             text-align: center;
             transition: transform 0.3s ease;
@@ -283,7 +283,7 @@
             border-top: 4px solid var(--v4-red); 
             box-shadow: 0 -15px 40px var(--v4-red-glow);
             z-index: 2;
-            padding-top: 40px;
+            padding-top: 50px; /* A medalha é maior (50px), exige mais padding pro espaço ficar igual */
         }
         
         .step-2 { 
@@ -307,7 +307,7 @@
             height: 65px;
             object-fit: cover;
             border: 2px solid #333;
-            margin-bottom: 6px;
+            margin-bottom: 10px; /* Distância padronizada abaixo da foto */
             flex-shrink: 0;
         }
 
@@ -339,7 +339,7 @@
             line-height: 1.2;
             text-transform: uppercase;
             letter-spacing: 0.5px;
-            margin: 4px 0;
+            margin: 4px 0 10px 0;
             width: 100%;
             white-space: nowrap;
             overflow: hidden;
@@ -348,11 +348,12 @@
 
         .step-1 .hunter-name { font-size: 1.25em; color: var(--v4-red); }
 
+        /* Joga o bloco de valores sempre para o chão do card */
         .podium-val {
             font-size: 1.2em;
             font-weight: 900;
             color: var(--green);
-            margin-top: 2px;
+            margin-top: auto; 
         }
 
         .podium-prov {
@@ -361,6 +362,7 @@
             color: var(--text-muted);
             text-transform: uppercase;
             margin-bottom: 4px;
+            margin-top: 2px;
         }
 
         .podium-pct {
@@ -372,13 +374,13 @@
         }
         .step-1 .podium-pct { color: #fff; background: var(--v4-red); }
 
-        /* Lista Mola (4º em diante) */
+        /* Lista Fixa e Compacta (Fim do Muito Espaçado) */
         .ranking-list {
             flex-grow: 1;
             display: flex;
             flex-direction: column;
-            justify-content: space-evenly;
-            gap: 1vh; 
+            justify-content: flex-start; /* Troca de space-evenly para alinhar tudo no topo */
+            gap: 12px; /* Espaço fixo e constante entre os cards */
             overflow-y: auto;
             padding-right: 10px;
         }
@@ -388,11 +390,10 @@
         .ranking-list::-webkit-scrollbar-thumb { background: var(--v4-red); }
 
         .ranking-card {
-            flex: 1;
-            max-height: 85px;
-            min-height: 60px;
+            flex: 0 0 auto; /* Impede os cards de esticarem verticalmente sozinhos */
+            height: 75px; /* Tamanho fixo e elegante */
             background: var(--card-bg);
-            padding: 1vh 20px;
+            padding: 0 20px;
             display: flex;
             align-items: center;
             gap: 18px;
