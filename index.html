@@ -684,7 +684,7 @@
                 });
 
                 document.getElementById('kpi-recebido').innerText = formatBRL(totalRecebido);
-                document.getElementById('kpi-provisionado').innerText = formatBRL(totalProvisionado);
+                document.getElementById('kpi-provisionado').innerText = formatBRL(Math.round(totalProvisionado));
                 
                 const pctGeral = totalProvisionado > 0 ? (totalRecebido / totalProvisionado) * 100 : 0;
                 document.getElementById('kpi-realizado').innerText = `${pctGeral.toFixed(2)}%`;
