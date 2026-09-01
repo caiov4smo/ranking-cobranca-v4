@@ -573,7 +573,15 @@
         const DATA_URL_RANKING = './dados.json';
         const DATA_URL_ONTEM = './dados2.json';
 
-        const mesExtenso = new Date().toLocaleDateString('pt-BR', { month: 'long', year: 'numeric' }).toUpperCase();
+        // 1. Cria o objeto com a data de hoje
+        const dataAjustada = new Date();
+        
+        // 2. Subtrai 3 dias da data atual
+        // Isso faz com que dias 1, 2 e 3 de um mês caiam no final do mês anterior
+        dataAjustada.setDate(dataAjustada.getDate() - 3);
+
+        // 3. Formata o mês por extenso usando a data ajustada
+        const mesExtenso = dataAjustada.toLocaleDateString('pt-BR', { month: 'long', year: 'numeric' }).toUpperCase();
         document.getElementById('mes-atual').innerText = mesExtenso;
 
         function parseNumber(val) {
