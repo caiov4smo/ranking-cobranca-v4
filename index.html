@@ -134,6 +134,7 @@
             font-weight: 900;
             letter-spacing: 1px;
             text-transform: uppercase;
+            text-align: center;
         }
 
         .highlight-body {
@@ -158,10 +159,15 @@
         }
 
         .highlight-name {
-            font-size: 1.1em;
+            font-size: 1.05em;
             font-weight: 900;
             margin-bottom: 6px;
             text-transform: uppercase;
+            text-align: center;
+            width: 100%;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
         }
 
         .highlight-label {
@@ -170,12 +176,14 @@
             text-transform: uppercase;
             letter-spacing: 2px;
             margin-bottom: 4px;
+            text-align: center;
         }
 
         .highlight-val {
             font-size: 1.4em;
             font-weight: 900;
             color: var(--green);
+            text-align: center;
         }
 
         /* LATERAL DIREITA */
@@ -245,7 +253,7 @@
             box-shadow: 0 0 12px var(--v4-red-glow);
         }
 
-        /* Pódio (Top 3) - Ajuste de Altura e Espaçamentos */
+        /* Pódio (Top 3) */
         .podium-wrapper {
             flex-shrink: 0;
             display: flex;
@@ -264,7 +272,7 @@
             flex-direction: column;
             align-items: center;
             justify-content: flex-start;
-            padding: 30px 10px 12px; /* Reduzido padding superior de 40px para 30px */
+            padding: 30px 10px 12px;
             position: relative;
             text-align: center;
             transition: transform 0.3s ease;
@@ -287,7 +295,7 @@
 
         .step-3 { 
             order: 3; 
-            height: 245px; /* Aumentado de 220px para 245px */
+            height: 245px; 
             border-top: 4px solid var(--bronze); 
         }
 
@@ -332,6 +340,7 @@
             letter-spacing: 0.5px;
             margin: 2px 0 6px 0;
             width: 100%;
+            text-align: center;
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis;
@@ -341,11 +350,19 @@
 
         .step-1 .hunter-name { font-size: 1.2em; color: var(--v4-red); }
 
+        .podium-val-group {
+            margin-top: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+        }
+
         .podium-val {
             font-size: 1.15em;
             font-weight: 900;
             color: var(--green);
-            margin-top: auto; 
+            text-align: center;
         }
 
         .podium-prov {
@@ -355,6 +372,7 @@
             text-transform: uppercase;
             margin-bottom: 4px;
             margin-top: 2px;
+            text-align: center;
         }
 
         .podium-pct {
@@ -363,6 +381,7 @@
             color: var(--text-muted);
             background: #1a1a1a;
             padding: 4px 12px;
+            text-align: center;
         }
         .step-1 .podium-pct { color: #fff; background: var(--v4-red); }
 
@@ -487,6 +506,7 @@
 <body>
 
     <div id="tv-board">
+        <!-- Header -->
         <div class="header">
             <h1>RANKING COBRANÇA</h1>
             <div class="header-right">
@@ -497,6 +517,7 @@
 
         <div class="main-content">
             
+            <!-- LATERAL ESQUERDA (Destaques) -->
             <div class="left-panel">
                 <div class="highlight-card">
                     <div class="highlight-header">
@@ -523,6 +544,7 @@
                 </div>
             </div>
 
+            <!-- LATERAL DIREITA -->
             <div class="right-panel">
                 <div class="kpi-grid">
                     <div class="kpi-card">
@@ -648,9 +670,11 @@
                             <div class="podium-badge">${rankPos}º</div>
                             <img src="${avatarUrl}" class="podium-avatar" alt="${item.hunter}">
                             <div class="hunter-name">${item.hunter}</div>
-                            <div class="podium-val">${formatBRL(recebido)}</div>
-                            <div class="podium-prov">${formatBRL(provisionado)}</div>
-                            <div class="podium-pct">${realizado.toFixed(2)}%</div>
+                            <div class="podium-val-group">
+                                <div class="podium-val">${formatBRL(recebido)}</div>
+                                <div class="podium-prov">${formatBRL(provisionado)}</div>
+                                <div class="podium-pct">${realizado.toFixed(2)}%</div>
+                            </div>
                         `;
                         podiumContainer.appendChild(step);
                     } else {
@@ -660,7 +684,7 @@
                             <div class="badge-rank-list">${rankPos}</div>
                             <img src="${avatarUrl}" class="avatar-list" alt="${item.hunter}">
                             <div class="info-list">
-                                <div class="hunter-name" style="font-size: 1em;">${item.hunter}</div>
+                                <div class="hunter-name" style="font-size: 1em; text-align: left;">${item.hunter}</div>
                                 <div class="progress-row">
                                     <div class="progress-bar-bg">
                                         <div class="progress-bar-fill" style="width: ${Math.min(realizado, 100)}%;"></div>
