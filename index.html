@@ -253,7 +253,7 @@
             box-shadow: 0 0 12px var(--v4-red-glow);
         }
 
-        /* Pódio (Top 3) */
+        /* Pódio (Top 3) - Centralização Vertical Corrigida */
         .podium-wrapper {
             flex-shrink: 0;
             display: flex;
@@ -271,8 +271,9 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: flex-start;
-            padding: 30px 10px 12px;
+            justify-content: center; /* Centraliza todo o bloco de conteúdo */
+            gap: 4px; /* Mantém o espaçamento controlado e uniforme */
+            padding: 22px 10px 12px;
             position: relative;
             text-align: center;
             transition: transform 0.3s ease;
@@ -284,7 +285,7 @@
             border-top: 4px solid var(--v4-red); 
             box-shadow: 0 -15px 40px var(--v4-red-glow);
             z-index: 2;
-            padding-top: 42px;
+            padding-top: 28px;
         }
         
         .step-2 { 
@@ -306,11 +307,11 @@
             height: 60px;
             object-fit: cover;
             border: 2px solid #333;
-            margin-bottom: 6px;
+            margin-bottom: 4px;
             flex-shrink: 0;
         }
 
-        .step-1 .podium-avatar { width: 80px; height: 80px; border-color: var(--v4-red); }
+        .step-1 .podium-avatar { width: 78px; height: 80px; border-color: var(--v4-red); }
         .step-2 .podium-avatar { border-color: var(--silver); }
         .step-3 .podium-avatar { border-color: var(--bronze); }
 
@@ -338,7 +339,7 @@
             line-height: 1.2;
             text-transform: uppercase;
             letter-spacing: 0.5px;
-            margin: 2px 0 6px 0;
+            margin: 2px 0;
             width: 100%;
             text-align: center;
             white-space: nowrap;
@@ -351,7 +352,7 @@
         .step-1 .hunter-name { font-size: 1.2em; color: var(--v4-red); }
 
         .podium-val-group {
-            margin-top: auto;
+            margin-top: 0; /* Remove o auto que empurrava para o fundo */
             display: flex;
             flex-direction: column;
             align-items: center;
