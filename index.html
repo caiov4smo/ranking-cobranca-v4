@@ -6,6 +6,10 @@
     <link rel="icon" type="image/png" href="./favicon.png">
     <title>Ranking Cobrança - V4 Company</title>
     <meta http-equiv="refresh" content="600">
+    <!-- Fonte Oficial de Carimbo Stencil Clássico -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Stardos+Stencil:wght@700&display=swap" rel="stylesheet">
     <style>
         :root {
             --bg: #030303;
@@ -52,6 +56,7 @@
             flex-direction: column;
             padding: 20px 25px;
             transform-origin: center center;
+            position: relative;
         }
 
         /* Header */
@@ -204,6 +209,7 @@
             grid-template-columns: 1fr 1fr;
             gap: 16px;
             margin-bottom: 14px;
+            width: 100%;
         }
 
         .kpi-card {
@@ -310,26 +316,28 @@
             box-shadow: 0 0 10px var(--v4-red-glow);
         }
 
-        /* Pódio (Top 3) */
+        /* Pódio (Top 3) - Expandido para ocupar 100% da largura e preencher as laterais */
         .podium-wrapper {
             flex-shrink: 0;
             display: flex;
-            justify-content: center;
+            justify-content: space-between;
             align-items: flex-end;
             gap: 16px;
             margin-bottom: 12px;
+            width: 100%;
         }
 
         .podium-step {
             background: linear-gradient(180deg, #111111 0%, #050505 100%);
             border: 1px solid var(--border);
-            width: 32%;
-            max-width: 330px;
+            flex: 1 1 0;
+            width: auto;
+            max-width: none;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            padding: 16px 20px 14px 12px;
+            padding: 16px 16px 14px 16px;
             position: relative;
             text-align: center;
             gap: 4px;
@@ -343,6 +351,7 @@
             box-shadow: 0 -10px 30px var(--v4-red-glow);
             z-index: 2;
             padding-top: 24px;
+            flex: 1.05 1 0;
         }
         
         .step-2 { 
@@ -360,33 +369,6 @@
         }
 
         .podium-step:hover { transform: translateY(-3px); }
-
-        /* Termômetro Vertical de Meta Diária (Pódio) */
-        .podium-gauge-wrapper {
-            position: absolute;
-            right: 8px;
-            top: 26px;
-            bottom: 14px;
-            width: 6px;
-            background: #141414;
-            border: 1px solid #252525;
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-end;
-            overflow: hidden;
-        }
-
-        .podium-gauge-fill {
-            width: 100%;
-            height: 0%;
-            background: #f59e0b;
-            transition: height 0.8s ease-in-out;
-        }
-
-        .podium-gauge-fill.achieved {
-            background: var(--green);
-            box-shadow: 0 0 10px var(--green-glow);
-        }
 
         .podium-top-group {
             display: flex;
@@ -440,13 +422,7 @@
             display: inline-block;
         }
 
-        .avatar-wrap-list {
-            position: relative;
-            display: inline-block;
-            flex-shrink: 0;
-        }
-
-        /* Selo Redondo de Cera Vermelha "ON TRACK" - Posicionado no espaço à DIREITA da foto */
+        /* Selo Redondo de Cera Vermelha "ON TRACK" */
         .wax-seal,
         .wax-seal-list,
         .wax-seal *,
@@ -536,31 +512,45 @@
             letter-spacing: 1px;
         }
 
-        /* Versão para a lista de classificação */
+        /* Coluna do Selo para a Lista */
+        .list-seal-col {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            min-width: 44px;
+            margin-left: 4px;
+            margin-right: auto;
+            flex-shrink: 0;
+        }
+
+        /* Versão do Selo de Cera na Lista */
         .wax-seal-list {
-            position: absolute;
-            right: -12px;
-            top: 50%;
-            transform: translateY(-50%) rotate(8deg);
-            width: 34px;
-            height: 34px;
+            width: 38px;
+            height: 38px;
+            transform: rotate(8deg);
             background: radial-gradient(circle at 35% 30%, #ff3b44 0%, #b80c14 55%, #66050a 100%);
             border: 1.5px solid #ff4d55;
             box-shadow: 
-                0 3px 8px rgba(0, 0, 0, 0.85),
+                0 3px 10px rgba(0, 0, 0, 0.9),
                 inset 0 1.5px 2px rgba(255, 255, 255, 0.45),
                 inset 0 -2px 3px rgba(0, 0, 0, 0.7),
-                0 0 12px rgba(237, 28, 36, 0.55);
+                0 0 14px rgba(237, 28, 36, 0.6);
             display: flex;
             align-items: center;
             justify-content: center;
-            z-index: 15;
+            z-index: 5;
             user-select: none;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .wax-seal-list:hover {
+            transform: rotate(0deg) scale(1.12);
+            box-shadow: 0 4px 14px rgba(0, 0, 0, 0.95), 0 0 20px rgba(237, 28, 36, 0.85);
         }
 
         .wax-seal-list .wax-seal-inner {
-            width: 26px;
-            height: 26px;
+            width: 29px;
+            height: 29px;
             border: 1px dashed rgba(255, 215, 215, 0.55);
             display: flex;
             flex-direction: column;
@@ -571,7 +561,7 @@
         }
 
         .wax-seal-list .wax-seal-text-on {
-            font-size: 7px;
+            font-size: 7.5px;
             font-weight: 900;
             color: #fff0f1;
             letter-spacing: 0.8px;
@@ -579,7 +569,7 @@
         }
 
         .wax-seal-list .wax-seal-text-track {
-            font-size: 5.6px;
+            font-size: 6px;
             font-weight: 900;
             color: #ffd4d7;
             letter-spacing: 0.6px;
@@ -614,20 +604,11 @@
         .step-2 .podium-badge { border-color: var(--silver); color: var(--silver); }
         .step-3 .podium-badge { border-color: var(--bronze); color: var(--bronze); }
 
-        .podium-top-group {
+        .podium-val-group {
+            width: 100%;
             display: flex;
             flex-direction: column;
             align-items: center;
-            width: 100%;
-            margin-top: 6px;
-        }
-
-        .step-1 .podium-top-group {
-            margin-top: 8px;
-        }
-
-        .podium-avatar {
-            gap: 2px;
         }
 
         .podium-val-title {
@@ -651,12 +632,12 @@
             font-size: 1.35em;
         }
 
-        /* Split HOJE e MÊS no Pódio */
+        /* Split HOJE e MÊS no Pódio com largura total e folga confortável */
         .podium-split-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
             width: 100%;
-            gap: 6px;
+            gap: 10px;
             padding-top: 6px;
             border-top: 1px solid #1a1a1a;
         }
@@ -667,8 +648,9 @@
             align-items: center;
             background: #0d0d0d;
             border: 1px solid #1f1f1f;
-            padding: 5px 4px 6px;
+            padding: 6px 6px 7px;
             position: relative;
+            width: 100%;
         }
 
         .podium-split-col.achieved {
@@ -689,18 +671,18 @@
         }
 
         .split-meta {
-            font-size: 0.70em;
+            font-size: 0.74em;
             font-weight: 700;
             color: #d1d5db;
             white-space: nowrap;
             margin-bottom: 4px;
         }
 
-        /* Box de Porcentagem com preenchimento interno em degradê + listras */
+        /* Box de Porcentagem com preenchimento interno */
         .split-pct {
             position: relative;
-            width: 88%;
-            height: 22px;
+            width: 96%;
+            height: 23px;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -715,7 +697,6 @@
             box-shadow: 0 0 8px rgba(82, 204, 90, 0.3), inset 0 1px 3px rgba(0,0,0,0.6);
         }
 
-        /* Camada de preenchimento contínua (estilo barras de cima) */
         .pct-bar-fill {
             position: absolute;
             left: 0;
@@ -742,7 +723,6 @@
             box-shadow: 0 0 10px var(--green-glow);
         }
 
-        /* Texto da % limpo e sem borda preta pesada */
         .pct-text-val {
             position: relative;
             z-index: 2;
@@ -762,6 +742,7 @@
             gap: 8px; 
             overflow-y: auto;
             padding-right: 8px;
+            width: 100%;
         }
 
         .ranking-list::-webkit-scrollbar { width: 5px; }
@@ -779,6 +760,7 @@
             border: 1px solid var(--border);
             border-left: 4px solid #333;
             transition: transform 0.2s ease, border-color 0.2s ease;
+            width: 100%;
         }
 
         .ranking-card:hover {
@@ -808,7 +790,6 @@
             flex-shrink: 0;
         }
 
-        /* Identificação do Hunter + Realizado */
         .hunter-main-info {
             display: flex;
             flex-direction: column;
@@ -834,23 +815,22 @@
             letter-spacing: -0.3px;
         }
 
-        /* Bloco Split na Lista: HOJE e MÊS */
         .list-split-group {
             display: flex;
             align-items: center;
-            gap: 12px;
-            margin-left: auto;
+            gap: 16px;
             flex-shrink: 0;
+            margin-left: auto;
         }
 
         .list-split-box {
             display: flex;
             align-items: center;
-            gap: 12px;
+            gap: 14px;
             background: #0d0d0d;
             border: 1px solid #1f1f1f;
-            padding: 6px 12px;
-            min-width: 195px;
+            padding: 7px 16px;
+            min-width: 235px;
             justify-content: space-between;
             position: relative;
         }
@@ -878,7 +858,7 @@
         }
 
         .list-split-meta {
-            font-size: 0.85em;
+            font-size: 0.88em;
             font-weight: 800;
             color: #e2e8f0;
             white-space: nowrap;
@@ -886,8 +866,8 @@
 
         .list-split-pct {
             position: relative;
-            min-width: 66px;
-            height: 24px;
+            min-width: 76px;
+            height: 26px;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -901,11 +881,121 @@
             border-color: rgba(82, 204, 90, 0.7);
             box-shadow: 0 0 8px rgba(82, 204, 90, 0.3), inset 0 1px 3px rgba(0,0,0,0.6);
         }
+
+        /* Carimbo Postal de Encomendas Vermelho "ON TRACK" */
+        .general-stamp-overlay {
+            display: none;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) rotate(-12deg);
+            z-index: 60;
+            pointer-events: none;
+            user-select: none;
+            opacity: 0;
+            filter: drop-shadow(0 0 24px rgba(237, 28, 36, 0.45));
+        }
+
+        .general-stamp-overlay.active-stamping {
+            display: flex;
+            animation: stamp-periodic-cycle 12s cubic-bezier(0.18, 0.89, 0.32, 1.25) infinite;
+        }
+
+        .rustic-stamp-svg {
+            width: 1180px;
+            height: 380px;
+            max-width: 96vw;
+            display: block;
+            overflow: visible;
+        }
+
+        @keyframes stamp-periodic-cycle {
+            0% {
+                opacity: 0;
+                transform: translate(-50%, -50%) rotate(-12deg) scale(1.6);
+            }
+            3% {
+                opacity: 0.55;
+                transform: translate(-50%, -50%) rotate(-12deg) scale(0.98);
+            }
+            5% {
+                opacity: 0.55;
+                transform: translate(-50%, -50%) rotate(-12deg) scale(1.01);
+            }
+            7% {
+                opacity: 0.55;
+                transform: translate(-50%, -50%) rotate(-12deg) scale(1);
+            }
+            80% {
+                opacity: 0.55;
+                transform: translate(-50%, -50%) rotate(-12deg) scale(1);
+            }
+            86% {
+                opacity: 0;
+                transform: translate(-50%, -50%) rotate(-12deg) scale(1.02);
+            }
+            96% {
+                opacity: 0;
+                transform: translate(-50%, -50%) rotate(-12deg) scale(1.6);
+            }
+            100% {
+                opacity: 0;
+                transform: translate(-50%, -50%) rotate(-12deg) scale(1.6);
+            }
+        }
     </style>
 </head>
 <body>
 
     <div id="tv-board">
+        <!-- Carimbo Postal de Despacho de Caixas ON TRACK com Filtro Grunge SVG -->
+        <div id="general-stamp" class="general-stamp-overlay">
+            <svg class="rustic-stamp-svg" viewBox="0 0 1040 340" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <filter id="rubber-grunge" x="-10%" y="-10%" width="120%" height="120%">
+                        <feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="4" result="noise" />
+                        <feDisplacementMap in="SourceGraphic" in2="noise" scale="5" xChannelSelector="R" yChannelSelector="G" result="displaced" />
+                    </filter>
+                    
+                    <mask id="stamp-wear-mask">
+                        <rect width="1040" height="340" fill="white" />
+                        <rect width="1040" height="340" fill="white" filter="url(#mask-noise)" />
+                    </mask>
+
+                    <filter id="mask-noise">
+                        <feTurbulence type="fractalNoise" baseFrequency="0.08" numOctaves="5" result="noise" />
+                        <feColorMatrix type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 6.5 -2.1" />
+                    </filter>
+                </defs>
+
+                <g filter="url(#rubber-grunge)" mask="url(#stamp-wear-mask)">
+                    <rect x="22" y="22" width="996" height="296" rx="28" ry="28" 
+                          fill="none" 
+                          stroke="#ed1c24" 
+                          stroke-width="10" 
+                          stroke-linecap="round" />
+                    
+                    <rect x="38" y="38" width="964" height="264" rx="18" ry="18" 
+                          fill="none" 
+                          stroke="#ed1c24" 
+                          stroke-width="3" 
+                          stroke-linecap="round" />
+
+                    <text x="520" y="214" 
+                          font-family="'Stardos Stencil', 'Black Ops One', -apple-system, sans-serif" 
+                          font-size="142" 
+                          font-weight="700" 
+                          letter-spacing="26" 
+                          fill="#ed1c24" 
+                          text-anchor="middle"
+                          transform="scale(0.96, 1.28)"
+                          transform-origin="520 214">
+                        ON TRACK
+                    </text>
+                </g>
+            </svg>
+        </div>
+
         <div class="header">
             <h1>RANKING COBRANÇA</h1>
             <div class="header-right">
@@ -923,7 +1013,7 @@
                         <h2>DESTAQUE DE ONTEM</h2>
                     </div>
                     <div class="highlight-body">
-                        <img id="yesterday-avatar" class="highlight-avatar" src="https://via.placeholder.com/150" alt="Destaque Ontem">
+                        <img id="yesterday-avatar" class="highlight-avatar" src="https://placehold.co/150x150/111111/ed1c24?text=Foto" alt="Destaque Ontem">
                         <div id="yesterday-name" class="highlight-name">-</div>
                         <div class="highlight-label">Total Recebido</div>
                         <div id="yesterday-val" class="highlight-val">R$ 0,00</div>
@@ -935,7 +1025,7 @@
                         <h2>DESTAQUE DA SEMANA</h2>
                     </div>
                     <div class="highlight-body">
-                        <img id="week-avatar" class="highlight-avatar" src="https://via.placeholder.com/150" alt="Destaque Semana">
+                        <img id="week-avatar" class="highlight-avatar" src="https://placehold.co/150x150/111111/ed1c24?text=Foto" alt="Destaque Semana">
                         <div id="week-name" class="highlight-name">-</div>
                         <div class="highlight-label">Total Recebido</div>
                         <div id="week-val" class="highlight-val">R$ 0,00</div>
@@ -990,7 +1080,7 @@
                     </div>
                 </div>
 
-                <!-- Pódio Top 3 -->
+                <!-- Pódio Top 3 (agora mais largo e ocupando toda a extensão) -->
                 <div class="podium-wrapper" id="podium-container"></div>
                 
                 <!-- Lista de 4º em diante -->
@@ -1013,7 +1103,7 @@
         const DATA_URL_RANKING = 'dados.json';
         const DATA_URL_ONTEM = 'dados2.json';
 
-        // Dados padrão (fallback) caso os arquivos json não existam ou estejam em ambiente blob/sandbox
+        // Dados padrão (fallback)
         const DEFAULT_RANKING = [
             {"rank":"1","foto":"https://lh3.googleusercontent.com/d/1llI2R5YQCzsm-1BBgujAiSEKAosLtIas","hunter":"Eric de Paula","recebido":"168.281,7","provisionado":"1.041.945,36","realizado":"16,15%","meta_hoje":"134.444,56","realizado_hoje":"125,17%"},
             {"rank":"2","foto":"https://lh3.googleusercontent.com/d/1I9zHbh7UQjw0G8E62BgBM-T1SJ2_phxh","hunter":"Deborah Reynaldo","recebido":"149.268,84","provisionado":"1.159.941,88","realizado":"12,87%","meta_hoje":"149.669,92","realizado_hoje":"99,73%"},
@@ -1047,7 +1137,6 @@
             return new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(val);
         }
 
-        // Formatação limpa e compacta sem centavos para economizar espaço
         function formatBRLCompact(val) {
             return new Intl.NumberFormat('pt-BR', { 
                 style: 'currency', 
@@ -1058,7 +1147,6 @@
 
         async function fetchSafeJSON(filename, fallbackData) {
             try {
-                // Previne o erro "Failed to parse URL" em ambientes iframe/blob que não suportam caminhos relativos
                 if (window.location.protocol === 'blob:' || window.location.protocol === 'about:') {
                     return fallbackData;
                 }
@@ -1087,7 +1175,7 @@
                     
                     document.getElementById('yesterday-name').innerText = nomeOntem;
                     document.getElementById('yesterday-val').innerText = formatBRL(valorOntem);
-                    document.getElementById('yesterday-avatar').src = hunterOntemObj ? hunterOntemObj.foto : 'https://via.placeholder.com/150';
+                    document.getElementById('yesterday-avatar').src = hunterOntemObj ? hunterOntemObj.foto : 'https://placehold.co/150x150/111111/ed1c24?text=Foto';
 
                     const nomeSemana = tops.top_hunter_semana || 'Sem Pagamentos';
                     const valorSemana = parseNumber(tops.recebido_semana_val);
@@ -1095,7 +1183,7 @@
                     
                     document.getElementById('week-name').innerText = nomeSemana;
                     document.getElementById('week-val').innerText = formatBRL(valorSemana);
-                    document.getElementById('week-avatar').src = hunterSemanaObj ? hunterSemanaObj.foto : 'https://via.placeholder.com/150';
+                    document.getElementById('week-avatar').src = hunterSemanaObj ? hunterSemanaObj.foto : 'https://placehold.co/150x150/111111/ed1c24?text=Foto';
                 }
 
                 const podiumContainer = document.getElementById('podium-container');
@@ -1122,7 +1210,7 @@
                     totalMetaHoje += metaHoje;
 
                     const rankPos = parseInt(item.rank) || (index + 1);
-                    const avatarUrl = item.foto || 'https://via.placeholder.com/150';
+                    const avatarUrl = item.foto || 'https://placehold.co/150x150/111111/ed1c24?text=Foto';
                     const isDailyAchieved = realizadoHoje >= 100;
                     const isMonthAchieved = realizado >= 100;
                     const widthHoje = Math.min(realizadoHoje, 100);
@@ -1162,7 +1250,7 @@
                                 <span class="podium-val-title">Realizado</span>
                                 <div class="podium-val">${formatBRL(recebido)}</div>
                                 
-                                <!-- Divisão: HOJE e MÊS com caixinha de % preenchida -->
+                                <!-- Divisão: HOJE e MÊS mais largos e confortáveis -->
                                 <div class="podium-split-grid">
                                     <div class="podium-split-col ${isDailyAchieved ? 'achieved' : ''}">
                                         <span class="split-tag">Hoje</span>
@@ -1189,18 +1277,17 @@
                         card.className = 'ranking-card';
                         card.innerHTML = `
                             <div class="badge-rank-list">${rankPos}</div>
-                            <div class="avatar-wrap-list">
-                                <img src="${avatarUrl}" class="avatar-list" alt="${item.hunter}">
-                                ${badgeOnTrackList}
-                            </div>
+                            <img src="${avatarUrl}" class="avatar-list" alt="${item.hunter}">
                             
-                            <!-- Nome e Realizado -->
                             <div class="hunter-main-info">
                                 <div class="hunter-name">${item.hunter}</div>
                                 <div class="val-recebido">${formatBRL(recebido)}</div>
                             </div>
                             
-                            <!-- Divisão: HOJE e MÊS com caixinha de % preenchida -->
+                            <div class="list-seal-col">
+                                ${badgeOnTrackList}
+                            </div>
+                            
                             <div class="list-split-group">
                                 <div class="list-split-box ${isDailyAchieved ? 'achieved' : ''}">
                                     <div class="list-split-meta-wrap">
@@ -1229,8 +1316,7 @@
                     }
                 });
 
-                // Preenchimento dos 2 Cards Consolidados (HOJE e MÊS)
-                // Card HOJE
+                // Preenchimento dos KPIs
                 document.getElementById('kpi-hoje-recebido').innerText = formatBRL(totalRecebido);
                 document.getElementById('kpi-hoje-meta').innerText = formatBRL(totalMetaHoje);
 
@@ -1246,6 +1332,16 @@
                 if (pctHojeGeral >= 100) {
                     hojeBar.style.background = 'var(--green)';
                     hojeBar.style.boxShadow = '0 0 15px var(--green-glow)';
+                }
+
+                // Carimbo ON TRACK
+                const generalStamp = document.getElementById('general-stamp');
+                if (generalStamp) {
+                    if (pctHojeGeral >= 100) {
+                        generalStamp.classList.add('active-stamping');
+                    } else {
+                        generalStamp.classList.remove('active-stamping');
+                    }
                 }
 
                 // Card MÊS
