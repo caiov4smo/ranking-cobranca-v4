@@ -409,6 +409,31 @@
         .step-2 .podium-avatar { border-color: var(--silver); }
         .step-3 .podium-avatar { border-color: var(--bronze); }
 
+        /* Estilização dos Nomes dos Hunters (Pódio e Destaque) */
+        .hunter-name {
+            font-weight: 800;
+            font-size: 0.95em;
+            line-height: 1.1;
+            text-transform: uppercase;
+            letter-spacing: 0.6px;
+            margin: 4px 0 5px 0;
+            width: 100%;
+            text-align: center;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            color: var(--text-main);
+            display: block;
+        }
+
+        .step-1 .hunter-name {
+            font-size: 1.15em;
+            font-weight: 900;
+            color: var(--v4-red);
+            letter-spacing: 0.8px;
+            text-shadow: 0 0 12px var(--v4-red-glow);
+        }
+
         /* Envoltório da foto para posicionar o selo */
         .podium-avatar-wrap {
             position: relative;
@@ -421,7 +446,7 @@
             flex-shrink: 0;
         }
 
-        /* Selo Redondo de Cera Vermelha "ON TRACK" */
+        /* Selo Redondo de Cera Vermelha "ON TRACK" - Posicionado no espaço à DIREITA da foto */
         .wax-seal,
         .wax-seal-list,
         .wax-seal *,
@@ -431,105 +456,133 @@
 
         .wax-seal {
             position: absolute;
-            right: -13px;
-            bottom: -5px;
-            width: 32px;
-            height: 32px;
+            right: -48px;
+            top: 50%;
+            transform: translateY(-50%) rotate(8deg);
+            width: 48px;
+            height: 48px;
             background: radial-gradient(circle at 35% 30%, #ff3b44 0%, #b80c14 55%, #66050a 100%);
-            border: 1.5px solid #ff4d55;
+            border: 2px solid #ff525a;
             box-shadow: 
-                0 3px 8px rgba(0,0,0,0.85),
-                inset 0 1.5px 2px rgba(255,255,255,0.45),
-                inset 0 -2px 3px rgba(0,0,0,0.7),
-                0 0 12px rgba(237, 28, 36, 0.55);
+                0 4px 14px rgba(0, 0, 0, 0.95),
+                inset 0 2px 3px rgba(255, 255, 255, 0.5),
+                inset 0 -3px 4px rgba(0, 0, 0, 0.75),
+                0 0 18px rgba(237, 28, 36, 0.7);
             display: flex;
             align-items: center;
             justify-content: center;
-            z-index: 10;
-            transform: rotate(-10deg);
-            transition: transform 0.2s ease;
+            z-index: 15;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
             user-select: none;
         }
 
+        .step-1 .wax-seal {
+            right: -54px;
+            top: 50%;
+            transform: translateY(-50%) rotate(10deg);
+            width: 52px;
+            height: 52px;
+            box-shadow: 
+                0 6px 18px rgba(0, 0, 0, 0.95),
+                inset 0 2px 3px rgba(255, 255, 255, 0.55),
+                inset 0 -3px 4px rgba(0, 0, 0, 0.8),
+                0 0 24px rgba(237, 28, 36, 0.85);
+        }
+
         .wax-seal:hover {
-            transform: rotate(0deg) scale(1.1);
+            transform: translateY(-50%) rotate(0deg) scale(1.1);
         }
 
         .wax-seal-inner {
-            width: 25px;
-            height: 25px;
-            border: 1px dashed rgba(255, 215, 215, 0.5);
+            width: 38px;
+            height: 38px;
+            border: 1.5px dashed rgba(255, 220, 220, 0.6);
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            line-height: 0.85;
-            box-shadow: inset 0 1px 2px rgba(0,0,0,0.5);
+            line-height: 0.9;
+            box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.55);
+        }
+
+        .step-1 .wax-seal-inner {
+            width: 42px;
+            height: 42px;
         }
 
         .wax-seal-text-on {
-            font-size: 6.5px;
+            font-size: 9px;
+            font-weight: 900;
+            color: #ffffff;
+            letter-spacing: 1px;
+            text-shadow: 0 1.5px 3px rgba(0, 0, 0, 0.95);
+        }
+
+        .step-1 .wax-seal-text-on {
+            font-size: 10px;
+            letter-spacing: 1.2px;
+        }
+
+        .wax-seal-text-track {
+            font-size: 7.2px;
+            font-weight: 900;
+            color: #ffe0e2;
+            letter-spacing: 0.8px;
+            text-shadow: 0 1.5px 3px rgba(0, 0, 0, 0.95);
+        }
+
+        .step-1 .wax-seal-text-track {
+            font-size: 8px;
+            letter-spacing: 1px;
+        }
+
+        /* Versão para a lista de classificação */
+        .wax-seal-list {
+            position: absolute;
+            right: -12px;
+            top: 50%;
+            transform: translateY(-50%) rotate(8deg);
+            width: 34px;
+            height: 34px;
+            background: radial-gradient(circle at 35% 30%, #ff3b44 0%, #b80c14 55%, #66050a 100%);
+            border: 1.5px solid #ff4d55;
+            box-shadow: 
+                0 3px 8px rgba(0, 0, 0, 0.85),
+                inset 0 1.5px 2px rgba(255, 255, 255, 0.45),
+                inset 0 -2px 3px rgba(0, 0, 0, 0.7),
+                0 0 12px rgba(237, 28, 36, 0.55);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 15;
+            user-select: none;
+        }
+
+        .wax-seal-list .wax-seal-inner {
+            width: 26px;
+            height: 26px;
+            border: 1px dashed rgba(255, 215, 215, 0.55);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            line-height: 0.88;
+            box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.5);
+        }
+
+        .wax-seal-list .wax-seal-text-on {
+            font-size: 7px;
             font-weight: 900;
             color: #fff0f1;
             letter-spacing: 0.8px;
             text-shadow: 0 1px 2px rgba(0, 0, 0, 0.95);
         }
 
-        .wax-seal-text-track {
-            font-size: 5.5px;
-            font-weight: 900;
-            color: #ffd4d7;
-            letter-spacing: 0.5px;
-            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.95);
-        }
-
-        /* Versão para a lista de classificação */
-        .wax-seal-list {
-            position: absolute;
-            right: -9px;
-            bottom: -3px;
-            width: 27px;
-            height: 27px;
-            background: radial-gradient(circle at 35% 30%, #ff3b44 0%, #b80c14 55%, #66050a 100%);
-            border: 1.5px solid #ff4d55;
-            box-shadow: 
-                0 2px 6px rgba(0,0,0,0.85),
-                inset 0 1px 2px rgba(255,255,255,0.45),
-                inset 0 -1.5px 2px rgba(0,0,0,0.7),
-                0 0 10px rgba(237, 28, 36, 0.5);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            z-index: 10;
-            transform: rotate(-10deg);
-            user-select: none;
-        }
-
-        .wax-seal-list .wax-seal-inner {
-            width: 21px;
-            height: 21px;
-            border: 1px dashed rgba(255, 215, 215, 0.5);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            line-height: 0.85;
-            box-shadow: inset 0 1px 2px rgba(0,0,0,0.5);
-        }
-
-        .wax-seal-list .wax-seal-text-on {
-            font-size: 5.8px;
-            font-weight: 900;
-            color: #fff0f1;
-            letter-spacing: 0.7px;
-            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.95);
-        }
-
         .wax-seal-list .wax-seal-text-track {
-            font-size: 4.8px;
+            font-size: 5.6px;
             font-weight: 900;
             color: #ffd4d7;
-            letter-spacing: 0.5px;
+            letter-spacing: 0.6px;
             text-shadow: 0 1px 2px rgba(0, 0, 0, 0.95);
         }
 
@@ -765,9 +818,13 @@
         }
 
         .hunter-main-info .hunter-name {
-            font-size: 0.95em;
+            font-size: 1em;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
             text-align: left;
-            margin: 0 0 2px 0;
+            margin: 0 0 3px 0;
+            color: var(--text-main);
         }
 
         .hunter-main-info .val-recebido {
