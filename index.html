@@ -342,21 +342,21 @@
             border-top: 4px solid var(--v4-red); 
             box-shadow: 0 -10px 30px var(--v4-red-glow);
             z-index: 2;
-            padding-top: 22px;
+            padding-top: 24px;
         }
         
         .step-2 { 
             order: 1; 
             height: 236px; 
             border-top: 4px solid var(--silver); 
-            padding-top: 16px;
+            padding-top: 20px;
         }
 
         .step-3 { 
             order: 3; 
             height: 222px; 
             border-top: 4px solid var(--bronze); 
-            padding-top: 14px;
+            padding-top: 18px;
         }
 
         .podium-step:hover { transform: translateY(-3px); }
@@ -535,7 +535,7 @@
 
         .podium-badge {
             position: absolute;
-            top: -16px;
+            top: -17px;
             width: 34px;
             height: 34px;
             display: flex;
@@ -546,34 +546,34 @@
             background: #111;
             border: 2px solid;
             color: #fff;
+            z-index: 25;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.9);
         }
-        .step-1 .podium-badge { border-color: var(--v4-red); background: var(--v4-red); top: -20px; width: 40px; height: 40px; font-size: 1.4em; }
+        .step-1 .podium-badge { 
+            border-color: var(--v4-red); 
+            background: var(--v4-red); 
+            top: -22px; 
+            width: 42px; 
+            height: 42px; 
+            font-size: 1.4em; 
+            box-shadow: 0 4px 15px var(--v4-red-glow);
+        }
         .step-2 .podium-badge { border-color: var(--silver); color: var(--silver); }
         .step-3 .podium-badge { border-color: var(--bronze); color: var(--bronze); }
 
-        .hunter-name {
-            font-weight: 800;
-            font-size: 0.95em;
-            line-height: 1.1;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            margin: 2px 0;
-            width: 100%;
-            text-align: center;
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            flex-shrink: 0;
-            display: block;
-        }
-
-        .step-1 .hunter-name { font-size: 1.12em; color: var(--v4-red); }
-
-        .podium-val-group {
+        .podium-top-group {
             display: flex;
             flex-direction: column;
             align-items: center;
             width: 100%;
+            margin-top: 6px;
+        }
+
+        .step-1 .podium-top-group {
+            margin-top: 8px;
+        }
+
+        .podium-avatar {
             gap: 2px;
         }
 
