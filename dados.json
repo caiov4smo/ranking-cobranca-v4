@@ -1,11 +1,57 @@
 [
   {
-    "error": {
-      "message": "401 - \"Unauthenticated\"",
-      "name": "AxiosError",
-      "stack": "AxiosError: Request failed with status code 401\n    at settle (/usr/local/lib/node_modules/n8n/node_modules/.pnpm/axios@1.12.0/node_modules/axios/lib/core/settle.js:19:12)\n    at RedirectableRequest.handleResponse (/usr/local/lib/node_modules/n8n/node_modules/.pnpm/axios@1.12.0/node_modules/axios/lib/adapters/http.js:565:9)\n    at RedirectableRequest.emit (node:events:531:35)\n    at RedirectableRequest._processResponse (/usr/local/lib/node_modules/n8n/node_modules/.pnpm/follow-redirects@1.15.11/node_modules/follow-redirects/index.js:409:10)\n    at ClientRequest.RedirectableRequest._onNativeResponse (/usr/local/lib/node_modules/n8n/node_modules/.pnpm/follow-redirects@1.15.11/node_modules/follow-redirects/index.js:102:12)\n    at Object.onceWrapper (node:events:634:26)\n    at ClientRequest.emit (node:events:519:28)\n    at HTTPParser.parserOnIncomingClient (node:_http_client:772:27)\n    at HTTPParser.parserOnHeadersComplete (node:_http_common:122:17)\n    at TLSSocket.socketOnData (node:_http_client:614:22)\n    at Axios.request (/usr/local/lib/node_modules/n8n/node_modules/.pnpm/axios@1.12.0/node_modules/axios/lib/core/Axios.js:45:41)\n    at processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at invokeAxios (/usr/local/lib/node_modules/n8n/node_modules/.pnpm/n8n-core@file+packages+core_@opentelemetry+api@1.9.0_@opentelemetry+sdk-trace-base@1.30_ec37920eb95917b28efaa783206b20f3/node_modules/n8n-core/src/execution-engine/node-execution-context/utils/request-helper-functions.ts:283:10)\n    at proxyRequestToAxios (/usr/local/lib/node_modules/n8n/node_modules/.pnpm/n8n-core@file+packages+core_@opentelemetry+api@1.9.0_@opentelemetry+sdk-trace-base@1.30_ec37920eb95917b28efaa783206b20f3/node_modules/n8n-core/src/execution-engine/node-execution-context/utils/request-helper-functions.ts:659:20)\n    at Object.request (/usr/local/lib/node_modules/n8n/node_modules/.pnpm/n8n-core@file+packages+core_@opentelemetry+api@1.9.0_@opentelemetry+sdk-trace-base@1.30_ec37920eb95917b28efaa783206b20f3/node_modules/n8n-core/src/execution-engine/node-execution-context/utils/request-helper-functions.ts:1804:4)",
-      "code": "ERR_BAD_REQUEST",
-      "status": 401
-    }
+    "rank": 1,
+    "foto": "https://lh3.googleusercontent.com/d/1llI2R5YQCzsm-1BBgujAiSEKAosLtIas",
+    "hunter": "Eric de Paula",
+    "recebido": 180865.0858,
+    "provisionado": 1085572.63,
+    "realizado": 0.16660800097732753,
+    "dif": 904707.5441999999,
+    "meta_hoje": 140073.89,
+    "realizado_hoje": 1.291211986759274
+  },
+  {
+    "rank": 2,
+    "foto": "https://lh3.googleusercontent.com/d/1I9zHbh7UQjw0G8E62BgBM-T1SJ2_phxh",
+    "hunter": "Deborah Reynaldo",
+    "recebido": 155670.29549999998,
+    "provisionado": 1153865.21,
+    "realizado": 0.13491202798288718,
+    "dif": 998194.9145,
+    "meta_hoje": 148885.83,
+    "realizado_hoje": 1.0455682417863406
+  },
+  {
+    "rank": 3,
+    "foto": "https://lh3.googleusercontent.com/d/1moW9yOCdmy9UHw-rsSgdCW_606gKzU0G",
+    "hunter": "Izabela Mattano",
+    "recebido": 115856.81760000001,
+    "provisionado": 931356.91,
+    "realizado": 0.12439572451338768,
+    "dif": 815500.0924,
+    "meta_hoje": 120175.09,
+    "realizado_hoje": 0.964066826161728
+  },
+  {
+    "rank": 4,
+    "foto": "https://lh3.googleusercontent.com/d/1PRm-1_2A2mcj4OLwwEW2lBFYT166eAzc",
+    "hunter": "Bruno Ferreira",
+    "recebido": 109883.6681,
+    "provisionado": 910737.34,
+    "realizado": 0.1206535224524779,
+    "dif": 800853.6719,
+    "meta_hoje": 117514.5,
+    "realizado_hoje": 0.9350647630717911
+  },
+  {
+    "rank": 5,
+    "foto": "https://lh3.googleusercontent.com/d/1lbvSP_l1b1DxtEhbz0ix8g83DKh2qEq0",
+    "hunter": "Gerson Xavier",
+    "recebido": 99668.1445,
+    "provisionado": 918467.91,
+    "realizado": 0.1085156524412486,
+    "dif": 818799.7655,
+    "meta_hoje": 118511.99,
+    "realizado_hoje": 0.8409962949740358
   }
 ]
