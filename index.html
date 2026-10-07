@@ -1354,14 +1354,13 @@
         const DATA_URL_ONTEM = 'dados2.json';
         const DATA_URL_M2 = 'dados3.json';
 
-        // Dados padrão (fallback com 6 colocados)
+        // Dados padrão (fallback sem M2, apenas hunters ativos da operação)
         const DEFAULT_RANKING = [
             {"rank":"1","foto":"https://lh3.googleusercontent.com/d/1llI2R5YQCzsm-1BBgujAiSEKAosLtIas","hunter":"Eric de Paula","recebido":"212.163,88","provisionado":"1.161.364,79","realizado":"18,27%","dif":"949.200,91","meta_hoje":"187.316,9","realizado_hoje":"113,26%"},
             {"rank":"2","foto":"https://lh3.googleusercontent.com/d/1I9zHbh7UQjw0G8E62BgBM-T1SJ2_phxh","hunter":"Deborah Reynaldo","recebido":"172.501,35","provisionado":"1.198.042","realizado":"14,4%","dif":"1.025.540,65","meta_hoje":"193.232,58","realizado_hoje":"89,27%"},
             {"rank":"3","foto":"https://lh3.googleusercontent.com/d/1PRm-1_2A2mcj4OLwwEW2lBFYT166eAzc","hunter":"Bruno Ferreira","recebido":"134.255,05","provisionado":"951.763,3","realizado":"14,11%","dif":"817.508,25","meta_hoje":"153.510,21","realizado_hoje":"87,46%"},
             {"rank":"4","foto":"https://lh3.googleusercontent.com/d/1moW9yOCdmy9UHw-rsSgdCW_606gKzU0G","hunter":"Izabela Mattano","recebido":"136.622,1","provisionado":"969.435,02","realizado":"14,09%","dif":"832.812,92","meta_hoje":"156.360,49","realizado_hoje":"87,38%"},
-            {"rank":"5","foto":"https://lh3.googleusercontent.com/d/1lbvSP_l1b1DxtEhbz0ix8g83DKh2qEq0","hunter":"Gerson Xavier","recebido":"105.049,02","provisionado":"958.461,9","realizado":"10,96%","dif":"853.412,88","meta_hoje":"154.590,63","realizado_hoje":"67,95%"},
-            {"rank":"6","foto":"https://lh3.googleusercontent.com/d/19luuWyZhGwoaKUVx0aJVyf4mR-yNkeCl","hunter":"M2","recebido":"35.083,94","provisionado":"2.320.642","realizado":"1,51%","dif":"2.285.558,06","meta_hoje":"374.297,09","realizado_hoje":"9,37%"}
+            {"rank":"5","foto":"https://lh3.googleusercontent.com/d/1lbvSP_l1b1DxtEhbz0ix8g83DKh2qEq0","hunter":"Gerson Xavier","recebido":"105.049,02","provisionado":"958.461,9","realizado":"10,96%","dif":"853.412,88","meta_hoje":"154.590,63","realizado_hoje":"67,95%"}
         ];
 
         const DEFAULT_ONTEM = [
@@ -1608,20 +1607,11 @@
                     fetchSafeJSON(DATA_URL_M2, DEFAULT_M2_SERIES)
                 ]);
 
-                // Garante que é array
+                // Garante que é array com todos os hunters do ranking
                 const fullList = Array.isArray(dataRankingRaw) ? [...dataRankingRaw] : [];
 
-                // Identifica e remove o registro M2 da lista principal do ranking
-                const m2Index = fullList.findIndex(d => (d.hunter || '').trim().toUpperCase() === 'M2');
-                let activeRanking = [];
-
-                if (m2Index !== -1) {
-                    activeRanking = fullList.filter((_, idx) => idx !== m2Index);
-                } else if (fullList.length > 1) {
-                    activeRanking = fullList.slice(0, fullList.length - 1);
-                } else {
-                    activeRanking = [...fullList];
-                }
+                // Todos os hunters de dados.json entram no ranking (mantendo apenas proteção caso "M2" apareça explicitamente)
+                const activeRanking = fullList.filter(d => (d.hunter || '').trim().toUpperCase() !== 'M2');
 
                 // Renderiza os dados operacionais do M2 a partir do dados3.json
                 const m2Series = Array.isArray(dataM2Raw) && dataM2Raw.length > 0 ? dataM2Raw : DEFAULT_M2_SERIES;
@@ -1689,7 +1679,7 @@
                 let totalProvisionado = 0;
                 let totalMetaHoje = 0;
 
-                // Itera apenas sobre os competidores do ranking ativo (sem o último colocado)
+                // Itera sobre todos os competidores do ranking ativo
                 activeRanking.forEach((item, index) => {
                     const recebido = parseNumber(item.recebido);
                     const provisionado = parseNumber(item.provisionado);
