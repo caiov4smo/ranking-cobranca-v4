@@ -3,12 +3,12 @@
     "rank": 1,
     "foto": "https://lh3.googleusercontent.com/d/1llI2R5YQCzsm-1BBgujAiSEKAosLtIas",
     "hunter": "Eric de Paula",
-    "recebido": 197077.693,
+    "recebido": 197077.69300000003,
     "provisionado": 1109295.1,
-    "realizado": 0.17766029346023432,
+    "realizado": 0.17766029346023435,
     "dif": 912217.4070000001,
-    "meta_hoje": 143134.85,
-    "realizado_hoje": 1.3768672898319312
+    "meta_hoje": 178918.56,
+    "realizado_hoje": 1.1014938472565396
   },
   {
     "rank": 2,
@@ -18,8 +18,8 @@
     "provisionado": 1141593.39,
     "realizado": 0.14511415058210875,
     "dif": 975932.0348999999,
-    "meta_hoje": 147302.37,
-    "realizado_hoje": 1.1246346891770986
+    "meta_hoje": 184127.97,
+    "realizado_hoje": 0.8997077146942964
   },
   {
     "rank": 3,
@@ -29,29 +29,29 @@
     "provisionado": 925653.18,
     "realizado": 0.1446575833078216,
     "dif": 791750.4280000001,
-    "meta_hoje": 119439.12,
-    "realizado_hoje": 1.1210962706356176
+    "meta_hoje": 149298.9,
+    "realizado_hoje": 0.8968770165084942
   },
   {
     "rank": 4,
     "foto": "https://lh3.googleusercontent.com/d/1PRm-1_2A2mcj4OLwwEW2lBFYT166eAzc",
     "hunter": "Bruno Ferreira",
-    "recebido": 124597.1341,
+    "recebido": 124597.13410000001,
     "provisionado": 908779.56,
-    "realizado": 0.137103803368993,
+    "realizado": 0.13710380336899303,
     "dif": 784182.4259,
-    "meta_hoje": 117261.88,
-    "realizado_hoje": 1.0625544644175924
+    "meta_hoje": 146577.35,
+    "realizado_hoje": 0.8500435715340741
   },
   {
     "rank": 5,
     "foto": "https://lh3.googleusercontent.com/d/1lbvSP_l1b1DxtEhbz0ix8g83DKh2qEq0",
     "hunter": "Gerson Xavier",
-    "recebido": 102410.38449999999,
+    "recebido": 102410.3845,
     "provisionado": 914678.76,
-    "realizado": 0.11196322575589268,
-    "dif": 812268.3755000001,
-    "meta_hoje": 118023.07,
-    "realizado_hoje": 0.8677149687768669
+    "realizado": 0.1119632257558927,
+    "dif": 812268.3755,
+    "meta_hoje": 147528.83,
+    "realizado_hoje": 0.6941720103114761
   }
 ]
