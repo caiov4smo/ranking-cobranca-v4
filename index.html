@@ -1335,19 +1335,25 @@
         }
 
         function parsePercent(val) {
-            if (typeof val === 'number') {
-                return (val > 0 && val <= 1) ? val * 100 : val;
-            }
-            if (!val) return 0;
+            if (val === null || val === undefined || val === '') return 0;
+
             const str = String(val).trim();
-            const hasPercent = str.includes('%');
-            const num = parseFloat(str.replace(/\./g, '').replace(',', '.').replace('%', '').trim()) || 0;
-            if (hasPercent) {
-                return num; // Já é porcentagem explícita (ex: "1,51%" -> 1.51)
+            // Se já contiver o símbolo '%' explícito (ex: "1,51%" ou "113,26%")
+            if (str.includes('%')) {
+                return parseFloat(str.replace(/\./g, '').replace(',', '.').replace('%', '').trim()) || 0;
             }
-            if (num > 0 && num <= 1) {
+
+            // Converte número direto ou string decimal sem '%'
+            const num = (typeof val === 'number')
+                ? val
+                : (parseFloat(str.replace(/\./g, '').replace(',', '.').trim()) || 0);
+
+            // Se for ratio decimal da API (ex: 0.1826 para 18.27% ou 1.1326 para 113.26%)
+            // Ratios de atingimento ficam geralmente abaixo de 5.0 (500%). Acima disso já é escala percentual direta (ex: 89.27)
+            if (num > 0 && num <= 5.0) {
                 return num * 100;
             }
+
             return num;
         }
 
