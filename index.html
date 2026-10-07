@@ -27,6 +27,7 @@
             --silver: #e2e8f0;
             --bronze: #cd7f32;
             --cyan-accent: #38bdf8;
+            --slate-last: #64748b;
         }
 
         * {
@@ -106,13 +107,14 @@
             min-height: 0;
         }
 
-        /* LATERAL ESQUERDA (Destaques) */
+        /* LATERAL ESQUERDA (Destaques e Último Colocado) */
         .left-panel {
             width: 20%;
             flex-shrink: 0;
             display: flex;
             flex-direction: column;
-            gap: 15px;
+            gap: 10px;
+            min-height: 0;
         }
 
         .highlight-card {
@@ -125,21 +127,168 @@
             min-height: 0;
         }
 
+        /* Variação visual para o card M2 (Tons de cinza claro elegante) */
+        .highlight-card.m2-card {
+            border-top: 4px solid #cbd5e1;
+            background: #09090b;
+        }
+
+        .highlight-card.m2-card .highlight-header {
+            background: #141416;
+            border-bottom: 1px solid #26262a;
+            padding: 6px 8px;
+        }
+
+        .highlight-card.m2-card .highlight-header h2 {
+            color: #e2e8f0;
+            font-size: 0.88em;
+            letter-spacing: 1.5px;
+            font-weight: 900;
+        }
+
+        .m2-body {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 8px 10px;
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0.03) 0%, #050505 100%);
+            overflow: hidden;
+            gap: 6px;
+        }
+
+        /* Hero Realizado (Destaque Principal) */
+        .m2-hero {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: #0d0d0f;
+            border: 1px solid #1f1f23;
+            padding: 5px 8px;
+            text-align: center;
+        }
+
+        .m2-hero-lbl {
+            font-size: 0.60em;
+            font-weight: 800;
+            color: #94a3b8;
+            text-transform: uppercase;
+            letter-spacing: 1.2px;
+            margin-bottom: 1px;
+        }
+
+        .m2-hero-val {
+            font-size: 1.25em;
+            font-weight: 900;
+            color: var(--green);
+            line-height: 1.1;
+            letter-spacing: -0.3px;
+        }
+
+        .m2-blocks-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 6px;
+            width: 100%;
+        }
+
+        .m2-period-box {
+            background: #0d0f12;
+            border: 1px solid #22262e;
+            padding: 5px 6px;
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+
+        .m2-period-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #1e2229;
+            padding-bottom: 2px;
+        }
+
+        .m2-period-tag {
+            font-size: 0.60em;
+            font-weight: 900;
+            color: #cbd5e1;
+            letter-spacing: 0.8px;
+            text-transform: uppercase;
+        }
+
+        .m2-period-pct {
+            font-size: 0.76em;
+            font-weight: 900;
+            color: #e2e8f0;
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.16);
+            padding: 1px 4px;
+            line-height: 1.1;
+        }
+
+        .m2-period-pct.achieved {
+            color: var(--green);
+            background: rgba(82, 204, 90, 0.15);
+            border-color: rgba(82, 204, 90, 0.4);
+        }
+
+        .m2-meta-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            font-size: 0.64em;
+        }
+
+        .m2-meta-lbl {
+            color: var(--text-muted);
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+
+        .m2-meta-val {
+            color: #f1f5f9;
+            font-weight: 800;
+            font-size: 1.05em;
+        }
+
+        .m2-bar-bg {
+            background: #141416;
+            height: 4px;
+            width: 100%;
+            overflow: hidden;
+            border: 1px solid #232328;
+        }
+
+        .m2-bar-fill {
+            height: 100%;
+            width: 0%;
+            background: linear-gradient(90deg, #64748b 0%, #cbd5e1 100%);
+            transition: width 0.8s ease-in-out;
+        }
+
+        .m2-bar-fill.achieved-fill {
+            background: var(--green) !important;
+            box-shadow: 0 0 6px var(--green-glow);
+        }
+
         .highlight-header {
             background: #111;
-            padding: 10px;
+            padding: 7px 8px;
             display: flex;
             align-items: center;
             justify-content: center;
             border-bottom: 1px solid var(--border);
+            flex-shrink: 0;
         }
 
         .highlight-header h2 {
             margin: 0;
             color: var(--gold-v4);
-            font-size: 0.95em;
+            font-size: 0.82em;
             font-weight: 900;
-            letter-spacing: 1px;
+            letter-spacing: 0.8px;
             text-transform: uppercase;
             text-align: center;
         }
@@ -150,25 +299,26 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            padding: 10px;
+            padding: 6px 10px;
             background: linear-gradient(180deg, rgba(255,192,42,0.05) 0%, #050505 100%);
             text-align: center;
             overflow: hidden;
         }
 
         .highlight-avatar {
-            width: 75px;
-            height: 75px;
+            width: 54px;
+            height: 54px;
             object-fit: cover;
             border: 2px solid var(--gold-v4);
-            margin-bottom: 8px;
-            box-shadow: 0 5px 15px var(--gold-v4-glow);
+            margin-bottom: 4px;
+            box-shadow: 0 4px 12px var(--gold-v4-glow);
+            flex-shrink: 0;
         }
 
         .highlight-name {
-            font-size: 1.05em;
+            font-size: 0.95em;
             font-weight: 900;
-            margin-bottom: 6px;
+            margin-bottom: 3px;
             text-transform: uppercase;
             text-align: center;
             width: 100%;
@@ -179,18 +329,27 @@
 
         .highlight-label {
             color: var(--text-muted);
-            font-size: 0.72em;
+            font-size: 0.64em;
             text-transform: uppercase;
-            letter-spacing: 1.5px;
-            margin-bottom: 2px;
+            letter-spacing: 1.2px;
+            margin-bottom: 1px;
             text-align: center;
         }
 
         .highlight-val {
-            font-size: 1.35em;
+            font-size: 1.15em;
             font-weight: 900;
             color: var(--green);
             text-align: center;
+            line-height: 1.1;
+        }
+
+        .highlight-sub {
+            font-size: 0.70em;
+            font-weight: 700;
+            color: var(--text-muted);
+            margin-top: 2px;
+            letter-spacing: 0.3px;
         }
 
         /* LATERAL DIREITA */
@@ -316,7 +475,7 @@
             box-shadow: 0 0 10px var(--v4-red-glow);
         }
 
-        /* Pódio (Top 3) - Expandido para ocupar 100% da largura e preencher as laterais */
+        /* Pódio (Top 3) */
         .podium-wrapper {
             flex-shrink: 0;
             display: flex;
@@ -391,7 +550,6 @@
         .step-2 .podium-avatar { border-color: var(--silver); }
         .step-3 .podium-avatar { border-color: var(--bronze); }
 
-        /* Estilização dos Nomes dos Hunters (Pódio e Destaque) */
         .hunter-name {
             font-weight: 800;
             font-size: 0.95em;
@@ -416,13 +574,12 @@
             text-shadow: 0 0 12px var(--v4-red-glow);
         }
 
-        /* Envoltório da foto para posicionar o selo */
         .podium-avatar-wrap {
             position: relative;
             display: inline-block;
         }
 
-        /* Selo Redondo de Cera Vermelha "ON TRACK" */
+        /* Selo Redondo de Cera "ON TRACK" */
         .wax-seal,
         .wax-seal-list,
         .wax-seal *,
@@ -512,7 +669,6 @@
             letter-spacing: 1px;
         }
 
-        /* Coluna do Selo para a Lista */
         .list-seal-col {
             display: flex;
             align-items: center;
@@ -523,7 +679,6 @@
             flex-shrink: 0;
         }
 
-        /* Versão do Selo de Cera na Lista */
         .wax-seal-list {
             width: 38px;
             height: 38px;
@@ -632,7 +787,6 @@
             font-size: 1.35em;
         }
 
-        /* Split HOJE e MÊS no Pódio com largura total e folga confortável */
         .podium-split-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -678,7 +832,6 @@
             margin-bottom: 4px;
         }
 
-        /* Box de Porcentagem com preenchimento interno */
         .split-pct {
             position: relative;
             width: 96%;
@@ -1006,7 +1159,7 @@
 
         <div class="main-content">
             
-            <!-- LATERAL ESQUERDA (Destaques) -->
+            <!-- LATERAL ESQUERDA (Destaques e Último Colocado) -->
             <div class="left-panel">
                 <div class="highlight-card">
                     <div class="highlight-header">
@@ -1029,6 +1182,53 @@
                         <div id="week-name" class="highlight-name">-</div>
                         <div class="highlight-label">Total Recebido</div>
                         <div id="week-val" class="highlight-val">R$ 0,00</div>
+                    </div>
+                </div>
+
+                <!-- TERCEIRO CARD: M2 (OPERACIONAL / SEM FOTO) -->
+                <div class="highlight-card m2-card">
+                    <div class="highlight-header">
+                        <h2>M2</h2>
+                    </div>
+                    <div class="m2-body">
+                        <!-- REALIZADO (Destaque Principal) -->
+                        <div class="m2-hero">
+                            <span class="m2-hero-lbl">Realizado</span>
+                            <span id="m2-recebido" class="m2-hero-val">R$ 0,00</span>
+                        </div>
+
+                        <!-- GRID: HOJE E MÊS (Meta e % Realizada) -->
+                        <div class="m2-blocks-grid">
+                            <!-- BLOCO HOJE -->
+                            <div class="m2-period-box">
+                                <div class="m2-period-header">
+                                    <span class="m2-period-tag">Hoje</span>
+                                    <span id="m2-pct-hoje" class="m2-period-pct">0.0%</span>
+                                </div>
+                                <div class="m2-meta-row">
+                                    <span class="m2-meta-lbl">Meta</span>
+                                    <span id="m2-meta-hoje" class="m2-meta-val">R$ 0</span>
+                                </div>
+                                <div class="m2-bar-bg">
+                                    <div id="m2-bar-hoje" class="m2-bar-fill"></div>
+                                </div>
+                            </div>
+
+                            <!-- BLOCO MÊS -->
+                            <div class="m2-period-box">
+                                <div class="m2-period-header">
+                                    <span class="m2-period-tag">Mês</span>
+                                    <span id="m2-pct-mes" class="m2-period-pct">0.0%</span>
+                                </div>
+                                <div class="m2-meta-row">
+                                    <span class="m2-meta-lbl">Meta</span>
+                                    <span id="m2-meta-mes" class="m2-meta-val">R$ 0</span>
+                                </div>
+                                <div class="m2-bar-bg">
+                                    <div id="m2-bar-mes" class="m2-bar-fill"></div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -1080,10 +1280,10 @@
                     </div>
                 </div>
 
-                <!-- Pódio Top 3 (agora mais largo e ocupando toda a extensão) -->
+                <!-- Pódio Top 3 (desconsiderando o último) -->
                 <div class="podium-wrapper" id="podium-container"></div>
                 
-                <!-- Lista de 4º em diante -->
+                <!-- Lista de 4º em diante (desconsiderando o último) -->
                 <div class="ranking-list" id="others-container"></div>
             </div>
 
@@ -1103,13 +1303,14 @@
         const DATA_URL_RANKING = 'dados.json';
         const DATA_URL_ONTEM = 'dados2.json';
 
-        // Dados padrão (fallback)
+        // Dados padrão (fallback com 6 colocados)
         const DEFAULT_RANKING = [
-            {"rank":"1","foto":"https://lh3.googleusercontent.com/d/1llI2R5YQCzsm-1BBgujAiSEKAosLtIas","hunter":"Eric de Paula","recebido":"168.281,7","provisionado":"1.041.945,36","realizado":"16,15%","meta_hoje":"134.444,56","realizado_hoje":"125,17%"},
-            {"rank":"2","foto":"https://lh3.googleusercontent.com/d/1I9zHbh7UQjw0G8E62BgBM-T1SJ2_phxh","hunter":"Deborah Reynaldo","recebido":"149.268,84","provisionado":"1.159.941,88","realizado":"12,87%","meta_hoje":"149.669,92","realizado_hoje":"99,73%"},
-            {"rank":"3","foto":"https://lh3.googleusercontent.com/d/1PRm-1_2A2mcj4OLwwEW2lBFYT166eAzc","hunter":"Bruno Ferreira","recebido":"107.130,99","provisionado":"947.705,39","realizado":"11,3%","meta_hoje":"122.284,57","realizado_hoje":"87,61%"},
-            {"rank":"4","foto":"https://lh3.googleusercontent.com/d/1moW9yOCdmy9UHw-rsSgdCW_606gKzU0G","hunter":"Izabela Mattano","recebido":"103.145,01","provisionado":"936.472,67","realizado":"11,01%","meta_hoje":"120.835,18","realizado_hoje":"85,36%"},
-            {"rank":"5","foto":"https://lh3.googleusercontent.com/d/1lbvSP_l1b1DxtEhbz0ix8g83DKh2qEq0","hunter":"Gerson Xavier","recebido":"90.468,93","provisionado":"913.934,71","realizado":"9,9%","meta_hoje":"117.927,06","realizado_hoje":"76,72%"}
+            {"rank":"1","foto":"https://lh3.googleusercontent.com/d/1llI2R5YQCzsm-1BBgujAiSEKAosLtIas","hunter":"Eric de Paula","recebido":"212.163,88","provisionado":"1.161.364,79","realizado":"18,27%","dif":"949.200,91","meta_hoje":"187.316,9","realizado_hoje":"113,26%"},
+            {"rank":"2","foto":"https://lh3.googleusercontent.com/d/1I9zHbh7UQjw0G8E62BgBM-T1SJ2_phxh","hunter":"Deborah Reynaldo","recebido":"172.501,35","provisionado":"1.198.042","realizado":"14,4%","dif":"1.025.540,65","meta_hoje":"193.232,58","realizado_hoje":"89,27%"},
+            {"rank":"3","foto":"https://lh3.googleusercontent.com/d/1PRm-1_2A2mcj4OLwwEW2lBFYT166eAzc","hunter":"Bruno Ferreira","recebido":"134.255,05","provisionado":"951.763,3","realizado":"14,11%","dif":"817.508,25","meta_hoje":"153.510,21","realizado_hoje":"87,46%"},
+            {"rank":"4","foto":"https://lh3.googleusercontent.com/d/1moW9yOCdmy9UHw-rsSgdCW_606gKzU0G","hunter":"Izabela Mattano","recebido":"136.622,1","provisionado":"969.435,02","realizado":"14,09%","dif":"832.812,92","meta_hoje":"156.360,49","realizado_hoje":"87,38%"},
+            {"rank":"5","foto":"https://lh3.googleusercontent.com/d/1lbvSP_l1b1DxtEhbz0ix8g83DKh2qEq0","hunter":"Gerson Xavier","recebido":"105.049,02","provisionado":"958.461,9","realizado":"10,96%","dif":"853.412,88","meta_hoje":"154.590,63","realizado_hoje":"67,95%"},
+            {"rank":"6","foto":"https://lh3.googleusercontent.com/d/19luuWyZhGwoaKUVx0aJVyf4mR-yNkeCl","hunter":"M2","recebido":"35.083,94","provisionado":"2.320.642","realizado":"1,51%","dif":"2.285.558,06","meta_hoje":"374.297,09","realizado_hoje":"9,37%"}
         ];
 
         const DEFAULT_ONTEM = [
@@ -1133,6 +1334,23 @@
             return parseFloat(String(val).replace(/\./g, '').replace(',', '.').replace('%', '').trim()) || 0;
         }
 
+        function parsePercent(val) {
+            if (typeof val === 'number') {
+                return (val > 0 && val <= 1) ? val * 100 : val;
+            }
+            if (!val) return 0;
+            const str = String(val).trim();
+            const hasPercent = str.includes('%');
+            const num = parseFloat(str.replace(/\./g, '').replace(',', '.').replace('%', '').trim()) || 0;
+            if (hasPercent) {
+                return num; // Já é porcentagem explícita (ex: "1,51%" -> 1.51)
+            }
+            if (num > 0 && num <= 1) {
+                return num * 100;
+            }
+            return num;
+        }
+
         function formatBRL(val) {
             return new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(val);
         }
@@ -1154,24 +1372,105 @@
                 if (!res.ok) throw new Error(`HTTP ${res.status}`);
                 return await res.json();
             } catch (err) {
-                console.warn(`Aviso ao ler ${filename} (usando dados de fallback):`, err.message);
+                console.warn(`Aviso ao ler ${filename} (usando fallback):`, err.message);
                 return fallbackData;
             }
         }
 
         async function render() {
             try {
-                const [dataRanking, dataOntem] = await Promise.all([
+                const [dataRankingRaw, dataOntem] = await Promise.all([
                     fetchSafeJSON(DATA_URL_RANKING, DEFAULT_RANKING),
                     fetchSafeJSON(DATA_URL_ONTEM, DEFAULT_ONTEM)
                 ]);
 
+                // Garante que é array
+                const fullList = Array.isArray(dataRankingRaw) ? [...dataRankingRaw] : [];
+
+                // Identifica o registro M2 (pelo nome 'M2' ou como último item da lista)
+                const m2Index = fullList.findIndex(d => (d.hunter || '').trim().toUpperCase() === 'M2');
+                let m2Hunter = null;
+                let activeRanking = [];
+
+                if (m2Index !== -1) {
+                    m2Hunter = fullList[m2Index];
+                    activeRanking = fullList.filter((_, idx) => idx !== m2Index);
+                } else if (fullList.length > 1) {
+                    m2Hunter = fullList[fullList.length - 1];
+                    activeRanking = fullList.slice(0, fullList.length - 1);
+                } else {
+                    activeRanking = [...fullList];
+                }
+
+                // Renderiza os dados operacionais do M2 no 3º card lateral
+                if (m2Hunter) {
+                    const m2Recebido = parseNumber(m2Hunter.recebido);
+                    const m2Provisionado = parseNumber(m2Hunter.provisionado);
+                    const m2Realizado = parsePercent(m2Hunter.realizado);
+
+                    const m2MetaHoje = parseNumber(m2Hunter.meta_hoje);
+                    const m2RealizadoHoje = parsePercent(m2Hunter.realizado_hoje);
+
+                    // Hero: Realizado
+                    const m2RecebidoEl = document.getElementById('m2-recebido');
+                    if (m2RecebidoEl) m2RecebidoEl.innerText = formatBRL(m2Recebido);
+
+                    // Bloco Hoje: Meta e %
+                    const m2MetaHojeEl = document.getElementById('m2-meta-hoje');
+                    if (m2MetaHojeEl) m2MetaHojeEl.innerText = formatBRLCompact(m2MetaHoje);
+
+                    const m2PctHojeEl = document.getElementById('m2-pct-hoje');
+                    if (m2PctHojeEl) {
+                        m2PctHojeEl.innerText = `${m2RealizadoHoje.toFixed(1)}%`;
+                        if (m2RealizadoHoje >= 100) {
+                            m2PctHojeEl.classList.add('achieved');
+                        } else {
+                            m2PctHojeEl.classList.remove('achieved');
+                        }
+                    }
+
+                    const m2BarHoje = document.getElementById('m2-bar-hoje');
+                    if (m2BarHoje) {
+                        m2BarHoje.style.width = `${Math.min(m2RealizadoHoje, 100)}%`;
+                        if (m2RealizadoHoje >= 100) {
+                            m2BarHoje.classList.add('achieved-fill');
+                        } else {
+                            m2BarHoje.classList.remove('achieved-fill');
+                        }
+                    }
+
+                    // Bloco Mês: Meta e %
+                    const m2MetaMesEl = document.getElementById('m2-meta-mes');
+                    if (m2MetaMesEl) m2MetaMesEl.innerText = formatBRLCompact(m2Provisionado);
+
+                    const m2PctMesEl = document.getElementById('m2-pct-mes');
+                    if (m2PctMesEl) {
+                        m2PctMesEl.innerText = `${m2Realizado.toFixed(2)}%`;
+                        if (m2Realizado >= 100) {
+                            m2PctMesEl.classList.add('achieved');
+                        } else {
+                            m2PctMesEl.classList.remove('achieved');
+                        }
+                    }
+
+                    const m2BarMes = document.getElementById('m2-bar-mes');
+                    if (m2BarMes) {
+                        m2BarMes.style.width = `${Math.min(m2Realizado, 100)}%`;
+                        if (m2Realizado >= 100) {
+                            m2BarMes.classList.add('achieved-fill');
+                        } else {
+                            m2BarMes.classList.remove('achieved-fill');
+                        }
+                    }
+                }
+
+                // Destaques Ontem e Semana
                 if (dataOntem && dataOntem.length > 0) {
                     const tops = dataOntem[0];
                     
                     const nomeOntem = tops.top_hunter_ontem || 'Sem Pagamentos';
                     const valorOntem = parseNumber(tops.recebido_ontem_val);
-                    const hunterOntemObj = dataRanking.find(d => d.hunter === nomeOntem);
+                    const hunterOntemObj = fullList.find(d => d.hunter === nomeOntem);
                     
                     document.getElementById('yesterday-name').innerText = nomeOntem;
                     document.getElementById('yesterday-val').innerText = formatBRL(valorOntem);
@@ -1179,7 +1478,7 @@
 
                     const nomeSemana = tops.top_hunter_semana || 'Sem Pagamentos';
                     const valorSemana = parseNumber(tops.recebido_semana_val);
-                    const hunterSemanaObj = dataRanking.find(d => d.hunter === nomeSemana);
+                    const hunterSemanaObj = fullList.find(d => d.hunter === nomeSemana);
                     
                     document.getElementById('week-name').innerText = nomeSemana;
                     document.getElementById('week-val').innerText = formatBRL(valorSemana);
@@ -1195,15 +1494,14 @@
                 let totalProvisionado = 0;
                 let totalMetaHoje = 0;
 
-                dataRanking.forEach((item, index) => {
+                // Itera apenas sobre os competidores do ranking ativo (sem o último colocado)
+                activeRanking.forEach((item, index) => {
                     const recebido = parseNumber(item.recebido);
                     const provisionado = parseNumber(item.provisionado);
-                    let realizado = parseNumber(item.realizado);
-                    if (realizado < 2 && realizado > 0) realizado = realizado * 100;
+                    const realizado = parsePercent(item.realizado);
 
                     const metaHoje = parseNumber(item.meta_hoje);
-                    let realizadoHoje = parseNumber(item.realizado_hoje);
-                    if (realizadoHoje < 2 && realizadoHoje > 0) realizadoHoje = realizadoHoje * 100;
+                    const realizadoHoje = parsePercent(item.realizado_hoje);
 
                     totalRecebido += recebido;
                     totalProvisionado += provisionado;
@@ -1250,7 +1548,6 @@
                                 <span class="podium-val-title">Realizado</span>
                                 <div class="podium-val">${formatBRL(recebido)}</div>
                                 
-                                <!-- Divisão: HOJE e MÊS mais largos e confortáveis -->
                                 <div class="podium-split-grid">
                                     <div class="podium-split-col ${isDailyAchieved ? 'achieved' : ''}">
                                         <span class="split-tag">Hoje</span>
@@ -1316,7 +1613,7 @@
                     }
                 });
 
-                // Preenchimento dos KPIs
+                // Preenchimento dos KPIs Consolidados (Hoje e Mês)
                 document.getElementById('kpi-hoje-recebido').innerText = formatBRL(totalRecebido);
                 document.getElementById('kpi-hoje-meta').innerText = formatBRL(totalMetaHoje);
 
@@ -1325,6 +1622,8 @@
                 pctHojeEl.innerText = `${pctHojeGeral.toFixed(1)}%`;
                 if (pctHojeGeral >= 100) {
                     pctHojeEl.classList.add('achieved');
+                } else {
+                    pctHojeEl.classList.remove('achieved');
                 }
 
                 const hojeBar = document.getElementById('kpi-hoje-bar');
@@ -1334,7 +1633,7 @@
                     hojeBar.style.boxShadow = '0 0 15px var(--green-glow)';
                 }
 
-                // Carimbo ON TRACK
+                // Carimbo ON TRACK Geral
                 const generalStamp = document.getElementById('general-stamp');
                 if (generalStamp) {
                     if (pctHojeGeral >= 100) {
@@ -1353,6 +1652,8 @@
                 mesPctEl.innerText = `${pctGeral.toFixed(2)}%`;
                 if (pctGeral >= 100) {
                     mesPctEl.classList.add('achieved');
+                } else {
+                    mesPctEl.classList.remove('achieved');
                 }
 
                 const fillBar = document.getElementById('kpi-overall-fill');
