@@ -137,6 +137,7 @@
             background: #141416;
             border-bottom: 1px solid #26262a;
             padding: 6px 8px;
+            position: relative;
         }
 
         .highlight-card.m2-card .highlight-header h2 {
@@ -144,6 +145,67 @@
             font-size: 0.88em;
             letter-spacing: 1.5px;
             font-weight: 900;
+        }
+
+        /* Selo ON TRACK compacto para o cabeçalho do M2 */
+        .wax-seal-m2,
+        .wax-seal-m2 * {
+            border-radius: 50% !important;
+        }
+
+        .wax-seal-m2 {
+            position: absolute;
+            right: 8px;
+            top: 50%;
+            transform: translateY(-50%) rotate(8deg);
+            width: 27px;
+            height: 27px;
+            background: radial-gradient(circle at 35% 30%, #ff3b44 0%, #b80c14 55%, #66050a 100%);
+            border: 1.5px solid #ff4d55;
+            box-shadow: 
+                0 2px 8px rgba(0, 0, 0, 0.9),
+                inset 0 1px 2px rgba(255, 255, 255, 0.45),
+                inset 0 -1.5px 2px rgba(0, 0, 0, 0.7),
+                0 0 10px rgba(237, 28, 36, 0.6);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 10;
+            user-select: none;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .wax-seal-m2:hover {
+            transform: translateY(-50%) rotate(0deg) scale(1.15);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.95), 0 0 16px rgba(237, 28, 36, 0.85);
+        }
+
+        .wax-seal-m2 .wax-seal-inner {
+            width: 20px;
+            height: 20px;
+            border: 1px dashed rgba(255, 215, 215, 0.55);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            line-height: 0.85;
+            box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.5);
+        }
+
+        .wax-seal-m2 .wax-seal-text-on {
+            font-size: 5.5px;
+            font-weight: 900;
+            color: #fff0f1;
+            letter-spacing: 0.6px;
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.95);
+        }
+
+        .wax-seal-m2 .wax-seal-text-track {
+            font-size: 4.2px;
+            font-weight: 900;
+            color: #ffd4d7;
+            letter-spacing: 0.5px;
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.95);
         }
 
         .m2-body {
@@ -157,120 +219,118 @@
             gap: 6px;
         }
 
-        /* Hero Realizado (Destaque Principal) */
+        /* Hero Realizado e Meta (Destaque Numérico) */
         .m2-hero {
             display: flex;
-            flex-direction: column;
+            justify-content: space-between;
             align-items: center;
-            justify-content: center;
             background: #0d0d0f;
             border: 1px solid #1f1f23;
-            padding: 5px 8px;
-            text-align: center;
+            padding: 6px 10px;
+            flex-shrink: 0;
+            gap: 10px;
+            width: 100%;
+        }
+
+        .m2-hero-item {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            flex: 1 1 50%;
+            min-width: 0;
+        }
+
+        .m2-hero-item.right {
+            align-items: flex-end;
+            text-align: right;
         }
 
         .m2-hero-lbl {
-            font-size: 0.60em;
+            font-size: 0.56em;
             font-weight: 800;
             color: #94a3b8;
             text-transform: uppercase;
-            letter-spacing: 1.2px;
-            margin-bottom: 1px;
+            letter-spacing: 1px;
+            margin-bottom: 2px;
+            white-space: nowrap;
         }
 
         .m2-hero-val {
-            font-size: 1.25em;
+            font-size: 0.80em;
             font-weight: 900;
             color: var(--green);
             line-height: 1.1;
             letter-spacing: -0.3px;
+            white-space: nowrap;
+            display: block;
+            max-width: 100%;
+            overflow: hidden;
+            text-overflow: ellipsis;
         }
 
-        .m2-blocks-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 6px;
-            width: 100%;
+        .m2-hero-val.meta-val {
+            color: #e2e8f0;
         }
 
-        .m2-period-box {
-            background: #0d0f12;
-            border: 1px solid #22262e;
-            padding: 5px 6px;
+        /* Container do Gráfico de Linha M2 (Acumulado) */
+        .m2-chart-container {
             display: flex;
             flex-direction: column;
+            width: 100%;
+            flex-grow: 1;
+            min-height: 0;
+            background: #0c0d10;
+            border: 1px solid #1f2229;
+            padding: 6px 8px;
             gap: 4px;
         }
 
-        .m2-period-header {
+        .m2-chart-legend {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            border-bottom: 1px solid #1e2229;
-            padding-bottom: 2px;
-        }
-
-        .m2-period-tag {
-            font-size: 0.60em;
-            font-weight: 900;
-            color: #cbd5e1;
-            letter-spacing: 0.8px;
-            text-transform: uppercase;
-        }
-
-        .m2-period-pct {
-            font-size: 0.76em;
-            font-weight: 900;
-            color: #e2e8f0;
-            background: rgba(255, 255, 255, 0.08);
-            border: 1px solid rgba(255, 255, 255, 0.16);
-            padding: 1px 4px;
-            line-height: 1.1;
-        }
-
-        .m2-period-pct.achieved {
-            color: var(--green);
-            background: rgba(82, 204, 90, 0.15);
-            border-color: rgba(82, 204, 90, 0.4);
-        }
-
-        .m2-meta-row {
-            display: flex;
-            justify-content: space-between;
-            align-items: baseline;
-            font-size: 0.64em;
-        }
-
-        .m2-meta-lbl {
-            color: var(--text-muted);
-            font-weight: 700;
-            text-transform: uppercase;
-        }
-
-        .m2-meta-val {
-            color: #f1f5f9;
+            font-size: 0.58em;
             font-weight: 800;
-            font-size: 1.05em;
+            text-transform: uppercase;
+            letter-spacing: 0.6px;
+            border-bottom: 1px solid #1a1e26;
+            padding-bottom: 3px;
         }
 
-        .m2-bar-bg {
-            background: #141416;
-            height: 4px;
-            width: 100%;
-            overflow: hidden;
-            border: 1px solid #232328;
+        .m2-leg-item {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            color: #94a3b8;
         }
 
-        .m2-bar-fill {
-            height: 100%;
-            width: 0%;
-            background: linear-gradient(90deg, #64748b 0%, #cbd5e1 100%);
-            transition: width 0.8s ease-in-out;
+        .m2-leg-line {
+            width: 12px;
+            height: 2px;
+            display: inline-block;
         }
 
-        .m2-bar-fill.achieved-fill {
-            background: var(--green) !important;
+        .m2-leg-line.meta {
+            background: #64748b;
+            border-top: 1px dashed #94a3b8;
+        }
+
+        .m2-leg-line.real {
+            background: var(--green);
             box-shadow: 0 0 6px var(--green-glow);
+        }
+
+        .m2-chart-svg-wrap {
+            flex-grow: 1;
+            width: 100%;
+            min-height: 0;
+            position: relative;
+        }
+
+        .m2-chart-svg-wrap svg {
+            width: 100%;
+            height: 100%;
+            display: block;
         }
 
         .highlight-header {
@@ -1189,44 +1249,34 @@
                 <div class="highlight-card m2-card">
                     <div class="highlight-header">
                         <h2>M2</h2>
+                        <div id="m2-seal" class="wax-seal-m2" style="display: none;" title="Meta Atingida!">
+                            <div class="wax-seal-inner">
+                                <span class="wax-seal-text-on">ON</span>
+                                <span class="wax-seal-text-track">TRACK</span>
+                            </div>
+                        </div>
                     </div>
                     <div class="m2-body">
-                        <!-- REALIZADO (Destaque Principal) -->
-                        <div class="m2-hero">
-                            <span class="m2-hero-lbl">Realizado</span>
-                            <span id="m2-recebido" class="m2-hero-val">R$ 0,00</span>
+                        <!-- GRÁFICO DE LINHA: ACUMULADO (META VS REALIZADO) -->
+                        <div class="m2-chart-container">
+                            <div class="m2-chart-legend">
+                                <span class="m2-leg-item"><span class="m2-leg-line real"></span>REALIZADO</span>
+                                <span class="m2-leg-item"><span class="m2-leg-line meta"></span>META</span>
+                            </div>
+                            <div id="m2-chart-wrap" class="m2-chart-svg-wrap">
+                                <!-- Gráfico SVG gerado dinamicamente via JS -->
+                            </div>
                         </div>
 
-                        <!-- GRID: HOJE E MÊS (Meta e % Realizada) -->
-                        <div class="m2-blocks-grid">
-                            <!-- BLOCO HOJE -->
-                            <div class="m2-period-box">
-                                <div class="m2-period-header">
-                                    <span class="m2-period-tag">Hoje</span>
-                                    <span id="m2-pct-hoje" class="m2-period-pct">0.0%</span>
-                                </div>
-                                <div class="m2-meta-row">
-                                    <span class="m2-meta-lbl">Meta</span>
-                                    <span id="m2-meta-hoje" class="m2-meta-val">R$ 0</span>
-                                </div>
-                                <div class="m2-bar-bg">
-                                    <div id="m2-bar-hoje" class="m2-bar-fill"></div>
-                                </div>
+                        <!-- REALIZADO E META ACUMULADA (Destaque Numérico Abaixo do Gráfico) -->
+                        <div class="m2-hero">
+                            <div class="m2-hero-item">
+                                <span class="m2-hero-lbl">REALIZADO</span>
+                                <span id="m2-recebido" class="m2-hero-val">R$ 0,00</span>
                             </div>
-
-                            <!-- BLOCO MÊS -->
-                            <div class="m2-period-box">
-                                <div class="m2-period-header">
-                                    <span class="m2-period-tag">Mês</span>
-                                    <span id="m2-pct-mes" class="m2-period-pct">0.0%</span>
-                                </div>
-                                <div class="m2-meta-row">
-                                    <span class="m2-meta-lbl">Meta</span>
-                                    <span id="m2-meta-mes" class="m2-meta-val">R$ 0</span>
-                                </div>
-                                <div class="m2-bar-bg">
-                                    <div id="m2-bar-mes" class="m2-bar-fill"></div>
-                                </div>
+                            <div class="m2-hero-item right">
+                                <span class="m2-hero-lbl">META</span>
+                                <span id="m2-meta" class="m2-hero-val meta-val">R$ 0,00</span>
                             </div>
                         </div>
                     </div>
@@ -1266,7 +1316,7 @@
                         </div>
                         <div class="kpi-metrics-row">
                             <div class="kpi-metric-block">
-                                <span class="kpi-metric-label">Realizado Mês</span>
+                                <span class="kpi-metric-label">Realizado</span>
                                 <strong class="kpi-metric-val" id="kpi-recebido" style="color: var(--green);">R$ 0,00</strong>
                             </div>
                             <div class="kpi-metric-block right">
@@ -1302,6 +1352,7 @@
 
         const DATA_URL_RANKING = 'dados.json';
         const DATA_URL_ONTEM = 'dados2.json';
+        const DATA_URL_M2 = 'dados3.json';
 
         // Dados padrão (fallback com 6 colocados)
         const DEFAULT_RANKING = [
@@ -1320,6 +1371,16 @@
                 "top_hunter_semana": "Eric de Paula",
                 "recebido_semana_val": "74.634,32"
             }
+        ];
+
+        const DEFAULT_M2_SERIES = [
+            {"dt_dia":"1/10/2026","num_dia":"1","meta_dia":"74.859,41","realizado_dia":"15.312,05","meta_acumulada":"74.859,41","realizado_acumulado":"15.312,05","pct_atingido_acumulado":"20,45","status_meta":"Abaixo da Meta"},
+            {"dt_dia":"2/10/2026","num_dia":"2","meta_dia":"74.859,41","realizado_dia":"6.679,2","meta_acumulada":"149.718,83","realizado_acumulado":"21.991,25","pct_atingido_acumulado":"14,68","status_meta":"Abaixo da Meta"},
+            {"dt_dia":"3/10/2026","num_dia":"3","meta_dia":"74.859,41","realizado_dia":"0","meta_acumulada":"224.578,25","realizado_acumulado":"21.991,25","pct_atingido_acumulado":"9,79","status_meta":"Abaixo da Meta"},
+            {"dt_dia":"4/10/2026","num_dia":"4","meta_dia":"74.859,41","realizado_dia":"0","meta_acumulada":"299.437,67","realizado_acumulado":"21.991,25","pct_atingido_acumulado":"7,34","status_meta":"Abaixo da Meta"},
+            {"dt_dia":"5/10/2026","num_dia":"5","meta_dia":"74.859,41","realizado_dia":"9.452,9","meta_acumulada":"374.297,09","realizado_acumulado":"31.444,15","pct_atingido_acumulado":"8,4","status_meta":"Abaixo da Meta"},
+            {"dt_dia":"6/10/2026","num_dia":"6","meta_dia":"74.859,41","realizado_dia":"0","meta_acumulada":"449.156,51","realizado_acumulado":"31.444,15","pct_atingido_acumulado":"7","status_meta":"Abaixo da Meta"},
+            {"dt_dia":"7/10/2026","num_dia":"7","meta_dia":"74.859,41","realizado_dia":"3.639,79","meta_acumulada":"524.015,93","realizado_acumulado":"35.083,94","pct_atingido_acumulado":"6,69","status_meta":"Abaixo da Meta"}
         ];
 
         const dataAjustada = new Date();
@@ -1369,6 +1430,162 @@
             }).format(val);
         }
 
+        /* Ajuste dinâmico de tamanho de fonte para evitar que informações se encavalem */
+        function autoScaleM2Hero() {
+            const elReal = document.getElementById('m2-recebido');
+            const elMeta = document.getElementById('m2-meta');
+            if (!elReal || !elMeta) return;
+
+            const maxLen = Math.max(elReal.innerText.length, elMeta.innerText.length);
+            let baseEm = 0.82;
+
+            if (maxLen >= 16) {
+                baseEm = 0.62;
+            } else if (maxLen >= 14) {
+                baseEm = 0.68;
+            } else if (maxLen >= 12) {
+                baseEm = 0.74;
+            } else if (maxLen >= 10) {
+                baseEm = 0.78;
+            }
+
+            elReal.style.fontSize = `${baseEm}em`;
+            elMeta.style.fontSize = `${baseEm}em`;
+
+            // Refinamento fino caso o espaço do pai ainda seja excedido
+            [elReal, elMeta].forEach(el => {
+                const parent = el.parentElement;
+                if (parent && parent.clientWidth > 0) {
+                    let cur = parseFloat(el.style.fontSize) || baseEm;
+                    while (el.scrollWidth > parent.clientWidth && cur > 0.52) {
+                        cur -= 0.02;
+                        el.style.fontSize = `${cur.toFixed(2)}em`;
+                    }
+                }
+            });
+        }
+
+        /* Renderizador do Gráfico Vetorial SVG para o M2 (Acumulado) */
+        function renderM2Chart(seriesData) {
+            const chartWrap = document.getElementById('m2-chart-wrap');
+            if (!chartWrap) return;
+
+            if (!seriesData || seriesData.length === 0) {
+                chartWrap.innerHTML = '<span style="font-size:0.7em;color:#64748b;">Sem dados</span>';
+                return;
+            }
+
+            const w = 230;
+            const h = 76;
+            const padX = 14;
+            const padTop = 8;
+            const padBottom = 16;
+            const innerW = w - (padX * 2);
+            const innerH = h - padTop - padBottom;
+
+            const n = seriesData.length;
+            const metas = seriesData.map(d => parseNumber(d.meta_acumulada));
+            const realizados = seriesData.map(d => parseNumber(d.realizado_acumulado));
+
+            let maxVal = Math.max(...metas, ...realizados, 1);
+            maxVal *= 1.08; // Folga no topo
+
+            // Calcula coordenadas X e Y
+            const pointsMeta = [];
+            const pointsReal = [];
+
+            seriesData.forEach((d, i) => {
+                const x = n === 1 ? (w / 2) : (padX + (i / (n - 1)) * innerW);
+                const yM = padTop + innerH - (metas[i] / maxVal) * innerH;
+                const yR = padTop + innerH - (realizados[i] / maxVal) * innerH;
+                pointsMeta.push({ x, y: yM, dia: d.num_dia || (i + 1) });
+                pointsReal.push({ x, y: yR, dia: d.num_dia || (i + 1) });
+            });
+
+            const pathMetaStr = pointsMeta.map((p, idx) => (idx === 0 ? `M ${p.x.toFixed(1)} ${p.y.toFixed(1)}` : `L ${p.x.toFixed(1)} ${p.y.toFixed(1)}`)).join(' ');
+            const pathRealStr = pointsReal.map((p, idx) => (idx === 0 ? `M ${p.x.toFixed(1)} ${p.y.toFixed(1)}` : `L ${p.x.toFixed(1)} ${p.y.toFixed(1)}`)).join(' ');
+
+            // Área sob a curva de realizado
+            const firstX = pointsReal[0].x.toFixed(1);
+            const lastX = pointsReal[pointsReal.length - 1].x.toFixed(1);
+            const baseFloorY = (padTop + innerH).toFixed(1);
+            const areaRealStr = `${pathRealStr} L ${lastX} ${baseFloorY} L ${firstX} ${baseFloorY} Z`;
+
+            // Determina intervalo inteligente para os rótulos do eixo X (evita encavalar)
+            let step = 1;
+            if (n > 24) step = 5;
+            else if (n > 16) step = 4;
+            else if (n > 10) step = 3;
+            else if (n > 7) step = 2;
+
+            const circleR = n > 22 ? 1.0 : (n > 14 ? 1.3 : 1.8);
+
+            // Linha e marcadores
+            let circlesMetaHtml = '';
+            let circlesRealHtml = '';
+            let xLabelsHtml = '';
+
+            pointsMeta.forEach((p, idx) => {
+                // Desenha ponto na meta com densidade adaptada
+                if (n <= 22 || idx % 2 === 0 || idx === n - 1) {
+                    circlesMetaHtml += `<circle cx="${p.x.toFixed(1)}" cy="${p.y.toFixed(1)}" r="${circleR}" fill="#94a3b8" />`;
+                }
+
+                // Exibição inteligente dos dias no eixo X
+                const isFirst = idx === 0;
+                const isLast = idx === n - 1;
+                const isStepTick = (idx % step === 0);
+                const farEnoughFromLast = (n - 1 - idx) >= Math.max(Math.floor(step * 0.7), 1);
+
+                if (isFirst || isLast || (isStepTick && farEnoughFromLast)) {
+                    xLabelsHtml += `<text x="${p.x.toFixed(1)}" y="${(h - 3).toFixed(1)}" font-size="6.8" font-weight="800" fill="#64748b" text-anchor="middle">D${p.dia}</text>`;
+                }
+            });
+
+            pointsReal.forEach((p, idx) => {
+                const isLast = idx === pointsReal.length - 1;
+                if (isLast) {
+                    circlesRealHtml += `
+                        <circle cx="${p.x.toFixed(1)}" cy="${p.y.toFixed(1)}" r="3.8" fill="none" stroke="var(--green)" stroke-width="1.5" />
+                        <circle cx="${p.x.toFixed(1)}" cy="${p.y.toFixed(1)}" r="2" fill="#ffffff" />
+                    `;
+                } else if (n <= 22 || idx % 2 === 0) {
+                    circlesRealHtml += `<circle cx="${p.x.toFixed(1)}" cy="${p.y.toFixed(1)}" r="${circleR}" fill="var(--green)" />`;
+                }
+            });
+
+            const svgHtml = `
+                <svg viewBox="0 0 ${w} ${h}" preserveAspectRatio="none">
+                    <defs>
+                        <linearGradient id="m2-real-grad" x1="0" y1="0" x2="0" y2="1">
+                            <stop offset="0%" stop-color="#52cc5a" stop-opacity="0.38"/>
+                            <stop offset="100%" stop-color="#52cc5a" stop-opacity="0.0"/>
+                        </linearGradient>
+                    </defs>
+
+                    <!-- Linhas horizontais sutis de guia -->
+                    <line x1="${padX}" y1="${baseFloorY}" x2="${w - padX}" y2="${baseFloorY}" stroke="#1f242d" stroke-width="1" />
+                    <line x1="${padX}" y1="${(padTop + innerH / 2).toFixed(1)}" x2="${w - padX}" y2="${(padTop + innerH / 2).toFixed(1)}" stroke="#171a21" stroke-dasharray="2,2" stroke-width="1" />
+
+                    <!-- Área Realizado Acumulado -->
+                    <path d="${areaRealStr}" fill="url(#m2-real-grad)" />
+
+                    <!-- Linha Meta Acumulada (Tracejada) -->
+                    <path d="${pathMetaStr}" fill="none" stroke="#64748b" stroke-width="1.8" stroke-dasharray="3,2" stroke-linecap="round" />
+                    ${circlesMetaHtml}
+
+                    <!-- Linha Realizado Acumulado (Sólida Verde) -->
+                    <path d="${pathRealStr}" fill="none" stroke="var(--green)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" />
+                    ${circlesRealHtml}
+
+                    <!-- Rótulos dos Dias no eixo X -->
+                    ${xLabelsHtml}
+                </svg>
+            `;
+
+            chartWrap.innerHTML = svgHtml;
+        }
+
         async function fetchSafeJSON(filename, fallbackData) {
             try {
                 if (window.location.protocol === 'blob:' || window.location.protocol === 'about:') {
@@ -1385,90 +1602,62 @@
 
         async function render() {
             try {
-                const [dataRankingRaw, dataOntem] = await Promise.all([
+                const [dataRankingRaw, dataOntem, dataM2Raw] = await Promise.all([
                     fetchSafeJSON(DATA_URL_RANKING, DEFAULT_RANKING),
-                    fetchSafeJSON(DATA_URL_ONTEM, DEFAULT_ONTEM)
+                    fetchSafeJSON(DATA_URL_ONTEM, DEFAULT_ONTEM),
+                    fetchSafeJSON(DATA_URL_M2, DEFAULT_M2_SERIES)
                 ]);
 
                 // Garante que é array
                 const fullList = Array.isArray(dataRankingRaw) ? [...dataRankingRaw] : [];
 
-                // Identifica o registro M2 (pelo nome 'M2' ou como último item da lista)
+                // Identifica e remove o registro M2 da lista principal do ranking
                 const m2Index = fullList.findIndex(d => (d.hunter || '').trim().toUpperCase() === 'M2');
-                let m2Hunter = null;
                 let activeRanking = [];
 
                 if (m2Index !== -1) {
-                    m2Hunter = fullList[m2Index];
                     activeRanking = fullList.filter((_, idx) => idx !== m2Index);
                 } else if (fullList.length > 1) {
-                    m2Hunter = fullList[fullList.length - 1];
                     activeRanking = fullList.slice(0, fullList.length - 1);
                 } else {
                     activeRanking = [...fullList];
                 }
 
-                // Renderiza os dados operacionais do M2 no 3º card lateral
-                if (m2Hunter) {
-                    const m2Recebido = parseNumber(m2Hunter.recebido);
-                    const m2Provisionado = parseNumber(m2Hunter.provisionado);
-                    const m2Realizado = parsePercent(m2Hunter.realizado);
+                // Renderiza os dados operacionais do M2 a partir do dados3.json
+                const m2Series = Array.isArray(dataM2Raw) && dataM2Raw.length > 0 ? dataM2Raw : DEFAULT_M2_SERIES;
+                const m2LatestDay = m2Series[m2Series.length - 1];
 
-                    const m2MetaHoje = parseNumber(m2Hunter.meta_hoje);
-                    const m2RealizadoHoje = parsePercent(m2Hunter.realizado_hoje);
+                if (m2LatestDay) {
+                    // Mantém o realizado acumulado e a meta acumulada abaixo do gráfico
+                    const realizadoAcumuladoM2 = parseNumber(m2LatestDay.realizado_acumulado);
+                    const metaAcumuladaM2 = parseNumber(m2LatestDay.meta_acumulada);
+                    const realizadoDiaM2 = parseNumber(m2LatestDay.realizado_dia);
+                    const metaDiaM2 = parseNumber(m2LatestDay.meta_dia);
 
-                    // Hero: Realizado
                     const m2RecebidoEl = document.getElementById('m2-recebido');
-                    if (m2RecebidoEl) m2RecebidoEl.innerText = formatBRL(m2Recebido);
-
-                    // Bloco Hoje: Meta e %
-                    const m2MetaHojeEl = document.getElementById('m2-meta-hoje');
-                    if (m2MetaHojeEl) m2MetaHojeEl.innerText = formatBRLCompact(m2MetaHoje);
-
-                    const m2PctHojeEl = document.getElementById('m2-pct-hoje');
-                    if (m2PctHojeEl) {
-                        m2PctHojeEl.innerText = `${m2RealizadoHoje.toFixed(1)}%`;
-                        if (m2RealizadoHoje >= 100) {
-                            m2PctHojeEl.classList.add('achieved');
-                        } else {
-                            m2PctHojeEl.classList.remove('achieved');
-                        }
+                    if (m2RecebidoEl) {
+                        m2RecebidoEl.innerText = formatBRL(realizadoAcumuladoM2);
                     }
 
-                    const m2BarHoje = document.getElementById('m2-bar-hoje');
-                    if (m2BarHoje) {
-                        m2BarHoje.style.width = `${Math.min(m2RealizadoHoje, 100)}%`;
-                        if (m2RealizadoHoje >= 100) {
-                            m2BarHoje.classList.add('achieved-fill');
-                        } else {
-                            m2BarHoje.classList.remove('achieved-fill');
-                        }
+                    const m2MetaEl = document.getElementById('m2-meta');
+                    if (m2MetaEl) {
+                        m2MetaEl.innerText = formatBRL(metaAcumuladaM2);
                     }
 
-                    // Bloco Mês: Meta e %
-                    const m2MetaMesEl = document.getElementById('m2-meta-mes');
-                    if (m2MetaMesEl) m2MetaMesEl.innerText = formatBRLCompact(m2Provisionado);
-
-                    const m2PctMesEl = document.getElementById('m2-pct-mes');
-                    if (m2PctMesEl) {
-                        m2PctMesEl.innerText = `${m2Realizado.toFixed(2)}%`;
-                        if (m2Realizado >= 100) {
-                            m2PctMesEl.classList.add('achieved');
-                        } else {
-                            m2PctMesEl.classList.remove('achieved');
-                        }
+                    // Selo ON TRACK no canto superior direito do card M2
+                    const isM2OnTrack = (metaAcumuladaM2 > 0 && realizadoAcumuladoM2 >= metaAcumuladaM2) || 
+                                        (metaDiaM2 > 0 && realizadoDiaM2 >= metaDiaM2);
+                    const m2SealEl = document.getElementById('m2-seal');
+                    if (m2SealEl) {
+                        m2SealEl.style.display = isM2OnTrack ? 'flex' : 'none';
                     }
 
-                    const m2BarMes = document.getElementById('m2-bar-mes');
-                    if (m2BarMes) {
-                        m2BarMes.style.width = `${Math.min(m2Realizado, 100)}%`;
-                        if (m2Realizado >= 100) {
-                            m2BarMes.classList.add('achieved-fill');
-                        } else {
-                            m2BarMes.classList.remove('achieved-fill');
-                        }
-                    }
+                    // Aplica dimensionamento dinâmico inteligente
+                    autoScaleM2Hero();
                 }
+
+                // Desenha o gráfico de linha acumulado (Meta Acumulada x Realizado Acumulado até o dia atual)
+                renderM2Chart(m2Series);
 
                 // Destaques Ontem e Semana
                 if (dataOntem && dataOntem.length > 0) {
