@@ -73,10 +73,10 @@
     "dt_dia": "2026-10-08",
     "num_dia": 8,
     "meta_dia": 8061.79,
-    "realizado_dia": 5962.35,
+    "realizado_dia": 11472.36,
     "meta_acumulada": 672818.11,
-    "realizado_acumulado": 41046.29,
-    "pct_atingido_acumulado": 6.1,
+    "realizado_acumulado": 46556.3,
+    "pct_atingido_acumulado": 6.91,
     "status_meta": "Abaixo da Meta"
   }
 ]
