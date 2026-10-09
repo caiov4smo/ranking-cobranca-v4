@@ -78,5 +78,15 @@
     "realizado_acumulado": 46556.3,
     "pct_atingido_acumulado": 6.91,
     "status_meta": "Abaixo da Meta"
+  },
+  {
+    "dt_dia": "2026-10-09",
+    "num_dia": 9,
+    "meta_dia": 38557.23,
+    "realizado_dia": 0,
+    "meta_acumulada": 711375.33,
+    "realizado_acumulado": 46556.3,
+    "pct_atingido_acumulado": 6.54,
+    "status_meta": "Abaixo da Meta"
   }
 ]
