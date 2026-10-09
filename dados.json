@@ -7,8 +7,8 @@
     "provisionado": 1177855.44,
     "realizado": 0.2331688255394058,
     "dif": 903216.2703999999,
-    "meta_hoje": 281973.35,
-    "realizado_hoje": 0.9739898100299197
+    "meta_hoje": 323008.6,
+    "realizado_hoje": 0.8502534285464847
   },
   {
     "rank": 2,
@@ -18,8 +18,8 @@
     "provisionado": 954786.92,
     "realizado": 0.20372701146764768,
     "dif": 760271.0342,
-    "meta_hoje": 198753.67,
-    "realizado_hoje": 0.9786782090614982
+    "meta_hoje": 233443.89,
+    "realizado_hoje": 0.833244707325602
   },
   {
     "rank": 3,
@@ -29,19 +29,19 @@
     "provisionado": 1181499.92,
     "realizado": 0.178694431312361,
     "dif": 970372.4637,
-    "meta_hoje": 270277.69,
-    "realizado_hoje": 0.7811501433951135
+    "meta_hoje": 286123.9,
+    "realizado_hoje": 0.7378882235982384
   },
   {
     "rank": 4,
     "foto": "https://lh3.googleusercontent.com/d/1PRm-1_2A2mcj4OLwwEW2lBFYT166eAzc",
     "hunter": "Bruno Ferreira",
-    "recebido": 161376.5411,
+    "recebido": 161376.54109999997,
     "provisionado": 944566.68,
-    "realizado": 0.17084716676645845,
-    "dif": 783190.1389,
-    "meta_hoje": 176952.4,
-    "realizado_hoje": 0.9119771254868542
+    "realizado": 0.17084716676645842,
+    "dif": 783190.1389000001,
+    "meta_hoje": 186500.62,
+    "realizado_hoje": 0.8652868880543131
   },
   {
     "rank": 5,
@@ -51,7 +51,7 @@
     "provisionado": 980358.05,
     "realizado": 0.15691892008231073,
     "dif": 826521.3235,
-    "meta_hoje": 234018.91,
-    "realizado_hoje": 0.6573687848558905
+    "meta_hoje": 268206.8,
+    "realizado_hoje": 0.5735750417215373
   }
 ]
