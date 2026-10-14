@@ -3,12 +3,12 @@
     "rank": 1,
     "foto": "https://lh3.googleusercontent.com/d/1jJ88zpSSzcYR43_kLVq9I2Rm9lSNr6k3",
     "hunter": "Mariana Giampaoli",
-    "recebido": 242472.88189999998,
-    "provisionado": 750896.55,
-    "realizado": 0.32291116785661084,
-    "dif": 508423.66810000007,
-    "meta_hoje": 369268.65,
-    "realizado_hoje": 0.6566300223428119
+    "recebido": 349943.8391,
+    "provisionado": 1097301.06,
+    "realizado": 0.318913242551684,
+    "dif": 747357.2209000001,
+    "meta_hoje": 530509.67,
+    "realizado_hoje": 0.6596370601501005
   },
   {
     "rank": 2,
@@ -23,17 +23,6 @@
   },
   {
     "rank": 3,
-    "foto": "https://lh3.googleusercontent.com/d/1llI2R5YQCzsm-1BBgujAiSEKAosLtIas",
-    "hunter": "Eric de Paula",
-    "recebido": 121956.55260000001,
-    "provisionado": 433443.34,
-    "realizado": 0.2813667701065611,
-    "dif": 311486.78740000003,
-    "meta_hoje": 207117.79,
-    "realizado_hoje": 0.588827027364477
-  },
-  {
-    "rank": 4,
     "foto": "https://lh3.googleusercontent.com/d/1PRm-1_2A2mcj4OLwwEW2lBFYT166eAzc",
     "hunter": "Bruno Ferreira",
     "recebido": 259097.44129999998,
@@ -44,25 +33,36 @@
     "realizado_hoje": 0.7227148228963002
   },
   {
-    "rank": 5,
+    "rank": 4,
     "foto": "https://lh3.googleusercontent.com/d/1I9zHbh7UQjw0G8E62BgBM-T1SJ2_phxh",
     "hunter": "Deborah Reynaldo",
-    "recebido": 303256.78819999995,
+    "recebido": 303256.7882,
     "provisionado": 1174356.2,
-    "realizado": 0.25823237293761464,
-    "dif": 871099.4118,
+    "realizado": 0.2582323729376147,
+    "dif": 871099.4117999999,
     "meta_hoje": 484645.37,
-    "realizado_hoje": 0.6257292589012043
+    "realizado_hoje": 0.6257292589012045
+  },
+  {
+    "rank": 5,
+    "foto": "https://lh3.googleusercontent.com/d/1lbvSP_l1b1DxtEhbz0ix8g83DKh2qEq0",
+    "hunter": "Gerson Xavier",
+    "recebido": 228340.17099999997,
+    "provisionado": 970379.81,
+    "realizado": 0.23531010089750318,
+    "dif": 742039.6390000001,
+    "meta_hoje": 438749.4,
+    "realizado_hoje": 0.5204341498814584
   },
   {
     "rank": 6,
-    "foto": "https://lh3.googleusercontent.com/d/1lbvSP_l1b1DxtEhbz0ix8g83DKh2qEq0",
-    "hunter": "Gerson Xavier",
-    "recebido": 228340.171,
-    "provisionado": 970379.81,
-    "realizado": 0.2353101008975032,
-    "dif": 742039.6390000001,
-    "meta_hoje": 438749.4,
-    "realizado_hoje": 0.5204341498814585
+    "foto": "https://lh3.googleusercontent.com/d/1llI2R5YQCzsm-1BBgujAiSEKAosLtIas",
+    "hunter": "Eric de Paula",
+    "recebido": 15585.5954,
+    "provisionado": 87038.83,
+    "realizado": 0.17906485415762138,
+    "dif": 71453.2346,
+    "meta_hoje": 45876.77,
+    "realizado_hoje": 0.3397273914445154
   }
 ]
