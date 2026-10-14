@@ -133,10 +133,10 @@
     "dt_dia": "2026-10-14",
     "num_dia": 14,
     "meta_dia": 146304.85,
-    "realizado_dia": 0,
+    "realizado_dia": 7474,
     "meta_acumulada": 1110406.64,
-    "realizado_acumulado": 220298.52,
-    "pct_atingido_acumulado": 19.83,
+    "realizado_acumulado": 227772.52,
+    "pct_atingido_acumulado": 20.51,
     "status_meta": "Abaixo da Meta"
   }
 ]
