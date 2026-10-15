@@ -7,8 +7,8 @@
     "provisionado": 1094478.87,
     "realizado": 0.3694710518257881,
     "dif": 690100.6107000001,
-    "meta_hoje": 489941.15,
-    "realizado_hoje": 0.8253608811997115
+    "meta_hoje": 515195.39,
+    "realizado_hoje": 0.784902712929943
   },
   {
     "rank": 2,
@@ -18,8 +18,8 @@
     "provisionado": 949518.81,
     "realizado": 0.33180176967742214,
     "dif": 634466.7885,
-    "meta_hoje": 388390.38,
-    "realizado_hoje": 0.811173596781671
+    "meta_hoje": 428086.57,
+    "realizado_hoje": 0.7359539952397945
   },
   {
     "rank": 3,
@@ -29,19 +29,19 @@
     "provisionado": 955759.23,
     "realizado": 0.31625760548501325,
     "dif": 653493.1044999999,
-    "meta_hoje": 353187.04,
-    "realizado_hoje": 0.8558245101519015
+    "meta_hoje": 373566.33,
+    "realizado_hoje": 0.8091364269900877
   },
   {
     "rank": 4,
     "foto": "https://lh3.googleusercontent.com/d/1I9zHbh7UQjw0G8E62BgBM-T1SJ2_phxh",
     "hunter": "Deborah Reynaldo",
-    "recebido": 369109.6901,
+    "recebido": 369820.66010000004,
     "provisionado": 1179663.1,
-    "realizado": 0.31289415605184223,
-    "dif": 810553.4099000001,
-    "meta_hoje": 460547.78,
-    "realizado_hoje": 0.8014579727210931
+    "realizado": 0.31349684507381814,
+    "dif": 809842.4399000001,
+    "meta_hoje": 482357.07,
+    "realizado_hoje": 0.7666948057794614
   },
   {
     "rank": 5,
@@ -51,18 +51,18 @@
     "provisionado": 955040.29,
     "realizado": 0.2891614902445634,
     "dif": 678879.4165,
-    "meta_hoje": 418856.64,
-    "realizado_hoje": 0.6593207487411444
+    "meta_hoje": 440653.95,
+    "realizado_hoje": 0.6267069057250025
   },
   {
     "rank": 6,
     "foto": "https://lh3.googleusercontent.com/d/1llI2R5YQCzsm-1BBgujAiSEKAosLtIas",
     "hunter": "Eric de Paula",
-    "recebido": 25914.0249,
+    "recebido": 25914.024900000004,
     "provisionado": 104606.69,
-    "realizado": 0.24772817971775993,
+    "realizado": 0.24772817971775996,
     "dif": 78692.6651,
-    "meta_hoje": 41493.78,
-    "realizado_hoje": 0.624527938886262
+    "meta_hoje": 46767.9,
+    "realizado_hoje": 0.5540985355339881
   }
 ]
