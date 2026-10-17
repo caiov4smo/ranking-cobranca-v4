@@ -7,19 +7,19 @@
     "provisionado": 1139173.18,
     "realizado": 0.4753225689530367,
     "dif": 597698.4575999998,
-    "meta_hoje": 697933.33,
-    "realizado_hoje": 0.7758258548850219
+    "meta_hoje": 733221.9,
+    "realizado_hoje": 0.7384868378863207
   },
   {
     "rank": 2,
     "foto": "https://lh3.googleusercontent.com/d/1moW9yOCdmy9UHw-rsSgdCW_606gKzU0G",
     "hunter": "Izabela Mattano",
-    "recebido": 431490.18740000005,
+    "recebido": 431490.1874,
     "provisionado": 929449.1,
-    "realizado": 0.4642429449875201,
-    "dif": 497958.9125999999,
-    "meta_hoje": 543902.43,
-    "realizado_hoje": 0.7933227792345036
+    "realizado": 0.46424294498752006,
+    "dif": 497958.9126,
+    "meta_hoje": 572029.71,
+    "realizado_hoje": 0.7543142949690498
   },
   {
     "rank": 3,
@@ -29,8 +29,8 @@
     "provisionado": 1196283.82,
     "realizado": 0.435151946801387,
     "dif": 675718.5867999999,
-    "meta_hoje": 674896.5,
-    "realizado_hoje": 0.7713260228790638
+    "meta_hoje": 702114.27,
+    "realizado_hoje": 0.741425228688202
   },
   {
     "rank": 4,
@@ -40,19 +40,19 @@
     "provisionado": 980250.32,
     "realizado": 0.41869195686669103,
     "dif": 569827.3953,
-    "meta_hoje": 517831.7,
-    "realizado_hoje": 0.7925797603738821
+    "meta_hoje": 557513,
+    "realizado_hoje": 0.7361674520594139
   },
   {
     "rank": 5,
     "foto": "https://lh3.googleusercontent.com/d/1lbvSP_l1b1DxtEhbz0ix8g83DKh2qEq0",
     "hunter": "Gerson Xavier",
-    "recebido": 372686.0945,
+    "recebido": 372686.09449999995,
     "provisionado": 954393.12,
-    "realizado": 0.3904953699791968,
+    "realizado": 0.39049536997919676,
     "dif": 581707.0255,
-    "meta_hoje": 572586.08,
-    "realizado_hoje": 0.6508822123304151
+    "meta_hoje": 603855.11,
+    "realizado_hoje": 0.6171780089763585
   },
   {
     "rank": 6,
@@ -62,7 +62,7 @@
     "provisionado": 39517.46,
     "realizado": 0.34660631022337973,
     "dif": 25820.459,
-    "meta_hoje": 34742.12,
-    "realizado_hoje": 0.39424770278843085
+    "meta_hoje": 35293.64,
+    "realizado_hoje": 0.38808694711001757
   }
 ]
