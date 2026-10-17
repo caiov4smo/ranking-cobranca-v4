@@ -3,12 +3,12 @@
     "rank": 1,
     "foto": "https://lh3.googleusercontent.com/d/1jJ88zpSSzcYR43_kLVq9I2Rm9lSNr6k3",
     "hunter": "Mariana Giampaoli",
-    "recebido": 541775.0179,
+    "recebido": 541775.0179000001,
     "provisionado": 1141411.59,
-    "realizado": 0.47465351030823155,
-    "dif": 599636.5721000001,
+    "realizado": 0.4746535103082316,
+    "dif": 599636.5721,
     "meta_hoje": 545276.8,
-    "realizado_hoje": 0.9935779734256068
+    "realizado_hoje": 0.993577973425607
   },
   {
     "rank": 2,
@@ -25,44 +25,44 @@
     "rank": 3,
     "foto": "https://lh3.googleusercontent.com/d/1I9zHbh7UQjw0G8E62BgBM-T1SJ2_phxh",
     "hunter": "Deborah Reynaldo",
-    "recebido": 518085.5052000001,
+    "recebido": 519124.5392,
     "provisionado": 1196749.06,
-    "realizado": 0.4329107266647864,
-    "dif": 678663.5548,
+    "realizado": 0.4337789404238178,
+    "dif": 677624.5208,
     "meta_hoje": 510863.29,
-    "realizado_hoje": 1.0141372757474902
+    "realizado_hoje": 1.0161711545176793
   },
   {
     "rank": 4,
     "foto": "https://lh3.googleusercontent.com/d/1PRm-1_2A2mcj4OLwwEW2lBFYT166eAzc",
     "hunter": "Bruno Ferreira",
-    "recebido": 409627.9277,
+    "recebido": 410422.92470000003,
     "provisionado": 979066.56,
-    "realizado": 0.4183861899031665,
-    "dif": 569438.6323,
+    "realizado": 0.41919818474854253,
+    "dif": 568643.6353,
     "meta_hoje": 377049.34,
-    "realizado_hoje": 1.0864040438315048
+    "realizado_hoje": 1.0885125132429618
   },
   {
     "rank": 5,
     "foto": "https://lh3.googleusercontent.com/d/1lbvSP_l1b1DxtEhbz0ix8g83DKh2qEq0",
     "hunter": "Gerson Xavier",
-    "recebido": 372083.456,
+    "recebido": 372686.0945,
     "provisionado": 951502.74,
-    "realizado": 0.3910482233608702,
-    "dif": 579419.284,
+    "realizado": 0.391681577816581,
+    "dif": 578816.6455,
     "meta_hoje": 431003.32,
-    "realizado_hoje": 0.8632960321512141
+    "realizado_hoje": 0.8646942545593385
   },
   {
     "rank": 6,
     "foto": "https://lh3.googleusercontent.com/d/1llI2R5YQCzsm-1BBgujAiSEKAosLtIas",
     "hunter": "Eric de Paula",
-    "recebido": 13396.7055,
+    "recebido": 13396.705500000002,
     "provisionado": 39206.2,
-    "realizado": 0.3416986471527463,
-    "dif": 25809.494499999997,
+    "realizado": 0.34169864715274634,
+    "dif": 25809.494499999993,
     "meta_hoje": 30798.61,
-    "realizado_hoje": 0.4349776012618751
+    "realizado_hoje": 0.4349776012618752
   }
 ]
