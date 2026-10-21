@@ -3,12 +3,12 @@
     "rank": 1,
     "foto": "https://lh3.googleusercontent.com/d/1I9zHbh7UQjw0G8E62BgBM-T1SJ2_phxh",
     "hunter": "Deborah Reynaldo",
-    "recebido": 564041.7335,
+    "recebido": 564041.7335000001,
     "provisionado": 1022690.52,
-    "realizado": 0.5515272924403366,
-    "dif": 458648.78650000005,
-    "meta_hoje": 740638.76,
-    "realizado_hoje": 0.7615611873999141
+    "realizado": 0.5515272924403367,
+    "dif": 458648.78649999993,
+    "meta_hoje": 767911.15,
+    "realizado_hoje": 0.7345143165325834
   },
   {
     "rank": 2,
@@ -18,8 +18,8 @@
     "provisionado": 951226.73,
     "realizado": 0.5452826726179152,
     "dif": 432539.2764,
-    "meta_hoje": 728485.92,
-    "realizado_hoje": 0.7120075204747951
+    "meta_hoje": 747480,
+    "realizado_hoje": 0.6939148252796061
   },
   {
     "rank": 3,
@@ -29,8 +29,8 @@
     "provisionado": 960638.19,
     "realizado": 0.5352525693362243,
     "dif": 446454.1305999999,
-    "meta_hoje": 694063.34,
-    "realizado_hoje": 0.7408316068098338
+    "meta_hoje": 734049.56,
+    "realizado_hoje": 0.7004759452481655
   },
   {
     "rank": 4,
@@ -40,8 +40,8 @@
     "provisionado": 1031519.04,
     "realizado": 0.5253633127314838,
     "dif": 489596.78,
-    "meta_hoje": 827984.77,
-    "realizado_hoje": 0.654507521919757
+    "meta_hoje": 848672.8,
+    "realizado_hoje": 0.6385526436101169
   },
   {
     "rank": 5,
@@ -51,8 +51,8 @@
     "provisionado": 653350.97,
     "realizado": 0.5013388179403789,
     "dif": 325800.767,
-    "meta_hoje": 475524.44,
-    "realizado_hoje": 0.6888188607088207
+    "meta_hoje": 493217.63,
+    "realizado_hoje": 0.664108870155351
   },
   {
     "rank": 6,
@@ -62,7 +62,7 @@
     "provisionado": 619641.54,
     "realizado": 0.46496190119855424,
     "dif": 331531.83150000003,
-    "meta_hoje": 506040.07,
-    "realizado_hoje": 0.5693416896808191
+    "meta_hoje": 513181.28,
+    "realizado_hoje": 0.5614189755713614
   }
 ]
