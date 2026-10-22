@@ -203,10 +203,20 @@
     "dt_dia": "2026-10-21",
     "num_dia": 21,
     "meta_dia": 176514.65,
-    "realizado_dia": 63338.19,
+    "realizado_dia": 64340.34,
     "meta_acumulada": 2083878.06,
-    "realizado_acumulado": 558519.08,
-    "pct_atingido_acumulado": 26.8,
+    "realizado_acumulado": 559521.23,
+    "pct_atingido_acumulado": 26.84,
+    "status_meta": "Abaixo da Meta"
+  },
+  {
+    "dt_dia": "2026-10-22",
+    "num_dia": 22,
+    "meta_dia": 27189.45,
+    "realizado_dia": 0,
+    "meta_acumulada": 2111067.51,
+    "realizado_acumulado": 559521.23,
+    "pct_atingido_acumulado": 26.5,
     "status_meta": "Abaixo da Meta"
   }
 ]
