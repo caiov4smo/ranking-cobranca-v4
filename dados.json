@@ -3,55 +3,55 @@
     "rank": 1,
     "foto": "https://lh3.googleusercontent.com/d/1moW9yOCdmy9UHw-rsSgdCW_606gKzU0G",
     "hunter": "Izabela Mattano",
-    "recebido": 611883.5478000001,
-    "provisionado": 930032.86,
-    "realizado": 0.6579160523424947,
-    "dif": 318149.3121999999,
-    "meta_hoje": 727666.99,
-    "realizado_hoje": 0.8408840255348123
+    "recebido": 612542.5478000001,
+    "provisionado": 928747.34,
+    "realizado": 0.6595362607444992,
+    "dif": 316204.7921999999,
+    "meta_hoje": 726661.18,
+    "realizado_hoje": 0.8429548249708344
   },
   {
     "rank": 2,
     "foto": "https://lh3.googleusercontent.com/d/1PRm-1_2A2mcj4OLwwEW2lBFYT166eAzc",
     "hunter": "Bruno Ferreira",
-    "recebido": 597266.7204,
-    "provisionado": 960683.65,
-    "realizado": 0.6217100919746058,
-    "dif": 363416.92960000003,
-    "meta_hoje": 727782.11,
-    "realizado_hoje": 0.8206669443963112
+    "recebido": 597566.7204,
+    "provisionado": 959355.76,
+    "realizado": 0.6228833403783389,
+    "dif": 361789.0396,
+    "meta_hoje": 726776.14,
+    "realizado_hoje": 0.822215655566238
   },
   {
     "rank": 3,
-    "foto": "https://lh3.googleusercontent.com/d/1jJ88zpSSzcYR43_kLVq9I2Rm9lSNr6k3",
-    "hunter": "Mariana Giampaoli",
-    "recebido": 731660.7887,
-    "provisionado": 1184022.05,
-    "realizado": 0.6179452390265874,
-    "dif": 452361.2613,
-    "meta_hoje": 951840.91,
-    "realizado_hoje": 0.7686797037332636
-  },
-  {
-    "rank": 4,
     "foto": "https://lh3.googleusercontent.com/d/1I9zHbh7UQjw0G8E62BgBM-T1SJ2_phxh",
     "hunter": "Deborah Reynaldo",
     "recebido": 708702.1445999999,
-    "provisionado": 1152832.8,
-    "realizado": 0.6147484219741144,
-    "dif": 444130.65540000016,
-    "meta_hoje": 878568.28,
-    "realizado_hoje": 0.8066557383564996
+    "provisionado": 1151239.31,
+    "realizado": 0.6155993271286053,
+    "dif": 442537.1654000002,
+    "meta_hoje": 877353.9,
+    "realizado_hoje": 0.8077722622535785
+  },
+  {
+    "rank": 4,
+    "foto": "https://lh3.googleusercontent.com/d/1jJ88zpSSzcYR43_kLVq9I2Rm9lSNr6k3",
+    "hunter": "Mariana Giampaoli",
+    "recebido": 731660.7887,
+    "provisionado": 1189627.07,
+    "realizado": 0.6150337422130113,
+    "dif": 457966.28130000003,
+    "meta_hoje": 957766.86,
+    "realizado_hoje": 0.7639236846219549
   },
   {
     "rank": 5,
     "foto": "https://lh3.googleusercontent.com/d/1lbvSP_l1b1DxtEhbz0ix8g83DKh2qEq0",
     "hunter": "Gerson Xavier",
     "recebido": 551516.9310000001,
-    "provisionado": 1011495.64,
-    "realizado": 0.5452489454131508,
-    "dif": 459978.7089999999,
-    "meta_hoje": 779736.41,
-    "realizado_hoje": 0.7073120145819535
+    "provisionado": 1010097.52,
+    "realizado": 0.5460036482418055,
+    "dif": 458580.5889999999,
+    "meta_hoje": 778658.63,
+    "realizado_hoje": 0.7082910401956247
   }
 ]
