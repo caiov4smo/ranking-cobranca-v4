@@ -23,6 +23,17 @@
   },
   {
     "rank": 3,
+    "foto": "https://lh3.googleusercontent.com/d/1PRm-1_2A2mcj4OLwwEW2lBFYT166eAzc",
+    "hunter": "Bruno Ferreira",
+    "recebido": 724044.3060000001,
+    "provisionado": 903246.06,
+    "realizado": 0.8016025068517875,
+    "dif": 179201.75399999996,
+    "meta_hoje": 855892.7,
+    "realizado_hoje": 0.8459521923717777
+  },
+  {
+    "rank": 4,
     "foto": "https://lh3.googleusercontent.com/d/1jJ88zpSSzcYR43_kLVq9I2Rm9lSNr6k3",
     "hunter": "Mariana Giampaoli",
     "recebido": 912088.3579,
@@ -31,17 +42,6 @@
     "dif": 226600.4421000001,
     "meta_hoje": 1095356.02,
     "realizado_hoje": 0.832686671042352
-  },
-  {
-    "rank": 4,
-    "foto": "https://lh3.googleusercontent.com/d/1PRm-1_2A2mcj4OLwwEW2lBFYT166eAzc",
-    "hunter": "Bruno Ferreira",
-    "recebido": 720477.3120000002,
-    "provisionado": 903246.06,
-    "realizado": 0.7976534234757693,
-    "dif": 182768.7479999999,
-    "meta_hoje": 855892.7,
-    "realizado_hoje": 0.8417846208993256
   },
   {
     "rank": 5,
