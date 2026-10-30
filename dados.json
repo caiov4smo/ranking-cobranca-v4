@@ -1,57 +1,7 @@
 [
-  {
-    "rank": 1,
-    "foto": "https://lh3.googleusercontent.com/d/1moW9yOCdmy9UHw-rsSgdCW_606gKzU0G",
-    "hunter": "Izabela Mattano",
-    "recebido": 927469.2048,
-    "provisionado": 956266.17,
-    "realizado": 0.969886035809465,
-    "dif": 28796.965200000093,
-    "meta_hoje": 950217.05,
-    "realizado_hoje": 0.9760603693650833
-  },
-  {
-    "rank": 2,
-    "foto": "https://lh3.googleusercontent.com/d/1PRm-1_2A2mcj4OLwwEW2lBFYT166eAzc",
-    "hunter": "Bruno Ferreira",
-    "recebido": 838076.9737000001,
-    "provisionado": 926292.57,
-    "realizado": 0.904764866785016,
-    "dif": 88215.59629999986,
-    "meta_hoje": 913675.86,
-    "realizado_hoje": 0.9172585272199268
-  },
-  {
-    "rank": 3,
-    "foto": "https://lh3.googleusercontent.com/d/1I9zHbh7UQjw0G8E62BgBM-T1SJ2_phxh",
-    "hunter": "Deborah Reynaldo",
-    "recebido": 1017623.5528000001,
-    "provisionado": 1132954.57,
-    "realizado": 0.8982033170138499,
-    "dif": 115331.0172,
-    "meta_hoje": 1118284.3,
-    "realizado_hoje": 0.9099864433400344
-  },
-  {
-    "rank": 4,
-    "foto": "https://lh3.googleusercontent.com/d/1lbvSP_l1b1DxtEhbz0ix8g83DKh2qEq0",
-    "hunter": "Gerson Xavier",
-    "recebido": 927858.1875000001,
-    "provisionado": 1043031.83,
-    "realizado": 0.8895780174800612,
-    "dif": 115173.64249999984,
-    "meta_hoje": 1042614.79,
-    "realizado_hoje": 0.8899338436394136
-  },
-  {
-    "rank": 5,
-    "foto": "https://lh3.googleusercontent.com/d/1jJ88zpSSzcYR43_kLVq9I2Rm9lSNr6k3",
-    "hunter": "Mariana Giampaoli",
-    "recebido": 1034863.9282,
-    "provisionado": 1180521.86,
-    "realizado": 0.8766156420009028,
-    "dif": 145657.93180000014,
-    "meta_hoje": 1175714.46,
-    "realizado_hoje": 0.8802000514648769
-  }
+{"rank":"4","foto":"https://lh3.googleusercontent.com/d/1lbvSP_l1b1DxtEhbz0ix8g83DKh2qEq0","hunter":"Gerson Xavier","recebido":"1.036.121,18","provisionado":"1.043.031,83","realizado":"99,34%","dif":"6.910,65","meta_hoje":"1.042.614,79","realizado_hoje":"99,38%"},
+{"rank":"1","foto":"https://lh3.googleusercontent.com/d/1moW9yOCdmy9UHw-rsSgdCW_606gKzU0G","hunter":"Izabela Mattano","recebido":"927.469,2","provisionado":"956.266,17","realizado":"96,99%","dif":"28.796,97","meta_hoje":"950.217,05","realizado_hoje":"97,61%"},
+{"rank":"2","foto":"https://lh3.googleusercontent.com/d/1PRm-1_2A2mcj4OLwwEW2lBFYT166eAzc","hunter":"Bruno Ferreira","recebido":"838.076,97","provisionado":"926.292,57","realizado":"90,48%","dif":"88.215,6","meta_hoje":"913.675,86","realizado_hoje":"91,73%"},
+{"rank":"3","foto":"https://lh3.googleusercontent.com/d/1I9zHbh7UQjw0G8E62BgBM-T1SJ2_phxh","hunter":"Deborah Reynaldo","recebido":"1.017.623,55","provisionado":"1.132.954,57","realizado":"89,82%","dif":"115.331,02","meta_hoje":"1.118.284,3","realizado_hoje":"91%"},
+{"rank":"5","foto":"https://lh3.googleusercontent.com/d/1jJ88zpSSzcYR43_kLVq9I2Rm9lSNr6k3","hunter":"Mariana Giampaoli","recebido":"1.034.863,93","provisionado":"1.180.521,86","realizado":"87,66%","dif":"145.657,93","meta_hoje":"1.175.714,46","realizado_hoje":"88,02%"}
 ]
