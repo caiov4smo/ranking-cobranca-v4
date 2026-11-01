@@ -25,12 +25,12 @@
     "rank": 3,
     "foto": "https://lh3.googleusercontent.com/d/1PRm-1_2A2mcj4OLwwEW2lBFYT166eAzc",
     "hunter": "Bruno Ferreira",
-    "recebido": 847460.1067000001,
+    "recebido": 847460.1067,
     "provisionado": 924239.28,
-    "realizado": 0.9169271692282978,
-    "dif": 76779.17329999991,
+    "realizado": 0.9169271692282976,
+    "dif": 76779.17330000002,
     "meta_hoje": 924239.28,
-    "realizado_hoje": 0.9169271692282978
+    "realizado_hoje": 0.9169271692282976
   },
   {
     "rank": 4,
@@ -47,11 +47,11 @@
     "rank": 5,
     "foto": "https://lh3.googleusercontent.com/d/1lbvSP_l1b1DxtEhbz0ix8g83DKh2qEq0",
     "hunter": "Gerson Xavier",
-    "recebido": 956026.8059999997,
+    "recebido": 956026.8059999996,
     "provisionado": 1082338.09,
-    "realizado": 0.8832977558795881,
-    "dif": 126311.28400000033,
+    "realizado": 0.883297755879588,
+    "dif": 126311.28400000045,
     "meta_hoje": 1082338.09,
-    "realizado_hoje": 0.8832977558795881
+    "realizado_hoje": 0.883297755879588
   }
 ]
