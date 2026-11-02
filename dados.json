@@ -14,12 +14,12 @@
     "rank": 2,
     "foto": "https://lh3.googleusercontent.com/d/1I9zHbh7UQjw0G8E62BgBM-T1SJ2_phxh",
     "hunter": "Deborah Reynaldo",
-    "recebido": 1028745.9284,
+    "recebido": 1028745.9284000001,
     "provisionado": 1117913.18,
-    "realizado": 0.9202377669435833,
-    "dif": 89167.25159999996,
+    "realizado": 0.9202377669435834,
+    "dif": 89167.25159999984,
     "meta_hoje": 1117913.18,
-    "realizado_hoje": 0.9202377669435833
+    "realizado_hoje": 0.9202377669435834
   },
   {
     "rank": 3,
@@ -47,11 +47,11 @@
     "rank": 5,
     "foto": "https://lh3.googleusercontent.com/d/1lbvSP_l1b1DxtEhbz0ix8g83DKh2qEq0",
     "hunter": "Gerson Xavier",
-    "recebido": 956026.8059999996,
+    "recebido": 956026.8059999997,
     "provisionado": 1082418.52,
-    "realizado": 0.8832321217120339,
-    "dif": 126391.71400000039,
+    "realizado": 0.883232121712034,
+    "dif": 126391.71400000027,
     "meta_hoje": 1082418.52,
-    "realizado_hoje": 0.8832321217120339
+    "realizado_hoje": 0.883232121712034
   }
 ]
