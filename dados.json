@@ -1,35 +1,57 @@
 [
   {
     "rank": 1,
-    "foto": "https://lh3.googleusercontent.com/d/1jJ88zpSSzcYR43_kLVq9I2Rm9lSNr6k3",
-    "hunter": "Mariana Giampaoli",
-    "recebido": 5856.744000000001,
-    "provisionado": 1955566.84,
-    "realizado": 0.002994908627106809,
-    "dif": 1949710.0960000001,
-    "meta_hoje": 108955.23,
-    "realizado_hoje": 0.053753674789177176
+    "foto": "https://lh3.googleusercontent.com/d/1PRm-1_2A2mcj4OLwwEW2lBFYT166eAzc",
+    "hunter": "Bruno Ferreira",
+    "recebido": 20267.513,
+    "provisionado": 1045038.74,
+    "realizado": 0.01939403031125908,
+    "dif": 1024771.227,
+    "meta_hoje": 57592.37,
+    "realizado_hoje": 0.35191316141356915
   },
   {
     "rank": 2,
-    "foto": "https://lh3.googleusercontent.com/d/1PRm-1_2A2mcj4OLwwEW2lBFYT166eAzc",
-    "hunter": "Bruno Ferreira",
-    "recebido": 1100,
-    "provisionado": 1744466.67,
-    "realizado": 0.0006305652145248496,
-    "dif": 1743366.67,
-    "meta_hoje": 96138.03,
-    "realizado_hoje": 0.011441882052295018
+    "foto": "https://lh3.googleusercontent.com/d/1jJ88zpSSzcYR43_kLVq9I2Rm9lSNr6k3",
+    "hunter": "Mariana Giampaoli",
+    "recebido": 13223.4644,
+    "provisionado": 1171500.23,
+    "realizado": 0.011287632781770774,
+    "dif": 1158276.7656,
+    "meta_hoje": 65270.63,
+    "realizado_hoje": 0.20259440425195838
   },
   {
     "rank": 3,
+    "foto": "https://lh3.googleusercontent.com/d/1I9zHbh7UQjw0G8E62BgBM-T1SJ2_phxh",
+    "hunter": "Deborah Reynaldo",
+    "recebido": 4736.396000000001,
+    "provisionado": 1177533.11,
+    "realizado": 0.004022303882393592,
+    "dif": 1172796.7140000002,
+    "meta_hoje": 60966.43,
+    "realizado_hoje": 0.07768859026188675
+  },
+  {
+    "rank": 4,
+    "foto": "https://lh3.googleusercontent.com/d/1lbvSP_l1b1DxtEhbz0ix8g83DKh2qEq0",
+    "hunter": "Gerson Xavier",
+    "recebido": 2163.6135,
+    "provisionado": 923022.82,
+    "realizado": 0.002344052013795282,
+    "dif": 920859.2065,
+    "meta_hoje": 67868.7,
+    "realizado_hoje": 0.03187940096097317
+  },
+  {
+    "rank": 5,
     "foto": "https://lh3.googleusercontent.com/d/1moW9yOCdmy9UHw-rsSgdCW_606gKzU0G",
     "hunter": "Izabela Mattano",
-    "recebido": 99.188,
-    "provisionado": 1539033.49,
-    "realizado": 0.00006444824017442271,
-    "dif": 1538934.302,
-    "meta_hoje": 82880.46,
-    "realizado_hoje": 0.0011967597670186675
+    "recebido": 1074.0700000000002,
+    "provisionado": 921972.11,
+    "realizado": 0.0011649701637937834,
+    "dif": 920898.04,
+    "meta_hoje": 49650.3,
+    "realizado_hoje": 0.021632699097487832
   }
 ]
