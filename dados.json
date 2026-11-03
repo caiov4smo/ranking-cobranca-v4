@@ -1,24 +1,35 @@
 [
   {
     "rank": 1,
-    "foto": "https://lh3.googleusercontent.com/d/1PRm-1_2A2mcj4OLwwEW2lBFYT166eAzc",
-    "hunter": "Bruno Ferreira",
-    "recebido": 1100,
-    "provisionado": 2783425.41,
-    "realizado": 0.0003951965071699191,
-    "dif": 2782325.41,
-    "meta_hoje": 153395.32,
-    "realizado_hoje": 0.007171014083089367
+    "foto": "https://lh3.googleusercontent.com/d/1jJ88zpSSzcYR43_kLVq9I2Rm9lSNr6k3",
+    "hunter": "Mariana Giampaoli",
+    "recebido": 5252.5515000000005,
+    "provisionado": 1955566.84,
+    "realizado": 0.002685948336084488,
+    "dif": 1950314.2885,
+    "meta_hoje": 108955.23,
+    "realizado_hoje": 0.04820834667596958
   },
   {
     "rank": 2,
+    "foto": "https://lh3.googleusercontent.com/d/1PRm-1_2A2mcj4OLwwEW2lBFYT166eAzc",
+    "hunter": "Bruno Ferreira",
+    "recebido": 1100,
+    "provisionado": 1744466.67,
+    "realizado": 0.0006305652145248496,
+    "dif": 1743366.67,
+    "meta_hoje": 96138.03,
+    "realizado_hoje": 0.011441882052295018
+  },
+  {
+    "rank": 3,
     "foto": "https://lh3.googleusercontent.com/d/1moW9yOCdmy9UHw-rsSgdCW_606gKzU0G",
     "hunter": "Izabela Mattano",
     "recebido": 99.188,
-    "provisionado": 2455641.59,
-    "realizado": 0.000040391887970915175,
-    "dif": 2455542.402,
-    "meta_hoje": 132241.89,
-    "realizado_hoje": 0.0007500497762093388
+    "provisionado": 1539033.49,
+    "realizado": 0.00006444824017442271,
+    "dif": 1538934.302,
+    "meta_hoje": 82880.46,
+    "realizado_hoje": 0.0011967597670186675
   }
 ]
