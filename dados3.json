@@ -43,10 +43,10 @@
     "dt_dia": "2026-11-05",
     "num_dia": 5,
     "meta_dia": 132542.21,
-    "realizado_dia": 0,
+    "realizado_dia": 26842.18,
     "meta_acumulada": 504301.29,
-    "realizado_acumulado": 144902.71,
-    "pct_atingido_acumulado": 28.73,
+    "realizado_acumulado": 171744.89,
+    "pct_atingido_acumulado": 34.05,
     "status_meta": "Abaixo da Meta"
   }
 ]
