@@ -12,46 +12,46 @@
   },
   {
     "rank": 2,
+    "foto": "https://lh3.googleusercontent.com/d/1lbvSP_l1b1DxtEhbz0ix8g83DKh2qEq0",
+    "hunter": "Gerson Xavier",
+    "recebido": 278206.8607,
+    "provisionado": 853556.02,
+    "realizado": 0.3259386076381958,
+    "dif": 575349.1592999999,
+    "meta_hoje": 432224.37,
+    "realizado_hoje": 0.6436630602295748
+  },
+  {
+    "rank": 3,
     "foto": "https://lh3.googleusercontent.com/d/1moW9yOCdmy9UHw-rsSgdCW_606gKzU0G",
     "hunter": "Izabela Mattano",
-    "recebido": 450195.10730000003,
+    "recebido": 450195.1073,
     "provisionado": 1404044.8,
     "realizado": 0.3206415545287444,
     "dif": 953849.6927,
     "meta_hoje": 671476.09,
-    "realizado_hoje": 0.6704559015645666
-  },
-  {
-    "rank": 3,
-    "foto": "https://lh3.googleusercontent.com/d/1lbvSP_l1b1DxtEhbz0ix8g83DKh2qEq0",
-    "hunter": "Gerson Xavier",
-    "recebido": 271544.5713,
-    "provisionado": 853556.02,
-    "realizado": 0.31813327413471937,
-    "dif": 582011.4487000001,
-    "meta_hoje": 432224.37,
-    "realizado_hoje": 0.6282490996516462
+    "realizado_hoje": 0.6704559015645665
   },
   {
     "rank": 4,
     "foto": "https://lh3.googleusercontent.com/d/119aJjplFhaXoRZEAaK7CqNJ0u9OhX_EP",
     "hunter": "Luana Santos",
-    "recebido": 262023.0795,
+    "recebido": 262948.593,
     "provisionado": 909937.18,
-    "realizado": 0.2879573285487686,
-    "dif": 647914.1005000001,
+    "realizado": 0.2889744465656409,
+    "dif": 646988.587,
     "meta_hoje": 403525.34,
-    "realizado_hoje": 0.6493348831575236
+    "realizado_hoje": 0.6516284528748554
   },
   {
     "rank": 5,
     "foto": "https://lh3.googleusercontent.com/d/1I9zHbh7UQjw0G8E62BgBM-T1SJ2_phxh",
     "hunter": "Deborah Reynaldo",
-    "recebido": 551766.3115,
+    "recebido": 554364.8815,
     "provisionado": 2068533.2,
-    "realizado": 0.2667427873528933,
-    "dif": 1516766.8885,
+    "realizado": 0.2679990253480099,
+    "dif": 1514168.3185,
     "meta_hoje": 835435.49,
-    "realizado_hoje": 0.6604535216716733
+    "realizado_hoje": 0.6635639593189895
   }
 ]
