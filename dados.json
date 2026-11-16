@@ -3,23 +3,23 @@
     "rank": 1,
     "foto": "https://lh3.googleusercontent.com/d/1moW9yOCdmy9UHw-rsSgdCW_606gKzU0G",
     "hunter": "Izabela Mattano",
-    "recebido": 537031.9669,
+    "recebido": 537031.9668999999,
     "provisionado": 1380237.61,
-    "realizado": 0.38908660581999355,
-    "dif": 843205.6431000001,
-    "meta_hoje": 854017.44,
-    "realizado_hoje": 0.6288302108912437
+    "realizado": 0.38908660581999344,
+    "dif": 843205.6431000002,
+    "meta_hoje": 895544.04,
+    "realizado_hoje": 0.5996711975214528
   },
   {
     "rank": 2,
     "foto": "https://lh3.googleusercontent.com/d/1lbvSP_l1b1DxtEhbz0ix8g83DKh2qEq0",
     "hunter": "Gerson Xavier",
-    "recebido": 318916.24210000003,
+    "recebido": 318916.2421,
     "provisionado": 876165.46,
-    "realizado": 0.36399088603652563,
-    "dif": 557249.2178999999,
-    "meta_hoje": 558934,
-    "realizado_hoje": 0.5705794281614646
+    "realizado": 0.3639908860365256,
+    "dif": 557249.2179,
+    "meta_hoje": 592259.73,
+    "realizado_hoje": 0.5384736222062574
   },
   {
     "rank": 3,
@@ -29,8 +29,8 @@
     "provisionado": 2021647.22,
     "realizado": 0.3309301471005411,
     "dif": 1352623.2081,
-    "meta_hoje": 1111038.4,
-    "realizado_hoje": 0.6021610161268953
+    "meta_hoje": 1177766.83,
+    "realizado_hoje": 0.5680445355215173
   },
   {
     "rank": 4,
@@ -40,7 +40,7 @@
     "provisionado": 961016.71,
     "realizado": 0.32325772451969126,
     "dif": 650360.6351,
-    "meta_hoje": 556399.25,
-    "realizado_hoje": 0.5583330223755694
+    "meta_hoje": 591184.15,
+    "realizado_hoje": 0.5254810618654103
   }
 ]
