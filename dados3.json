@@ -233,10 +233,10 @@
     "dt_dia": "2026-11-24",
     "num_dia": 24,
     "meta_dia": 27419.78,
-    "realizado_dia": 8143.21,
+    "realizado_dia": 13684.71,
     "meta_acumulada": 1916920.72,
-    "realizado_acumulado": 630965.01,
-    "pct_atingido_acumulado": 32.91,
+    "realizado_acumulado": 636506.51,
+    "pct_atingido_acumulado": 33.2,
     "status_meta": "Abaixo da Meta"
   }
 ]
