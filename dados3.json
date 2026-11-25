@@ -192,11 +192,11 @@
   {
     "dt_dia": "2026-11-20",
     "num_dia": 20,
-    "meta_dia": 145116.16,
+    "meta_dia": 56557.66,
     "realizado_dia": 0,
-    "meta_acumulada": 1800047.09,
+    "meta_acumulada": 1711488.58,
     "realizado_acumulado": 610345.83,
-    "pct_atingido_acumulado": 33.9,
+    "pct_atingido_acumulado": 35.66,
     "status_meta": "Abaixo da Meta"
   },
   {
@@ -204,9 +204,9 @@
     "num_dia": 21,
     "meta_dia": 0,
     "realizado_dia": 0,
-    "meta_acumulada": 1800047.09,
+    "meta_acumulada": 1711488.58,
     "realizado_acumulado": 610345.83,
-    "pct_atingido_acumulado": 33.9,
+    "pct_atingido_acumulado": 35.66,
     "status_meta": "Abaixo da Meta"
   },
   {
@@ -214,9 +214,9 @@
     "num_dia": 22,
     "meta_dia": 1248.15,
     "realizado_dia": 0,
-    "meta_acumulada": 1801295.24,
+    "meta_acumulada": 1712736.74,
     "realizado_acumulado": 610345.83,
-    "pct_atingido_acumulado": 33.88,
+    "pct_atingido_acumulado": 35.63,
     "status_meta": "Abaixo da Meta"
   },
   {
@@ -224,9 +224,9 @@
     "num_dia": 23,
     "meta_dia": 84168.07,
     "realizado_dia": 12475.97,
-    "meta_acumulada": 1885463.31,
+    "meta_acumulada": 1796904.81,
     "realizado_acumulado": 622821.8,
-    "pct_atingido_acumulado": 33.03,
+    "pct_atingido_acumulado": 34.66,
     "status_meta": "Abaixo da Meta"
   },
   {
@@ -234,9 +234,9 @@
     "num_dia": 24,
     "meta_dia": 32305.75,
     "realizado_dia": 16384.71,
-    "meta_acumulada": 1917769.06,
+    "meta_acumulada": 1829210.55,
     "realizado_acumulado": 639206.51,
-    "pct_atingido_acumulado": 33.33,
+    "pct_atingido_acumulado": 34.94,
     "status_meta": "Abaixo da Meta"
   },
   {
@@ -244,9 +244,9 @@
     "num_dia": 25,
     "meta_dia": 124758.15,
     "realizado_dia": 0,
-    "meta_acumulada": 2042527.21,
+    "meta_acumulada": 1953968.71,
     "realizado_acumulado": 639206.51,
-    "pct_atingido_acumulado": 31.29,
+    "pct_atingido_acumulado": 32.71,
     "status_meta": "Abaixo da Meta"
   }
 ]
