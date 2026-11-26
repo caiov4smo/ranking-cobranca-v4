@@ -252,11 +252,11 @@
   {
     "dt_dia": "2026-11-26",
     "num_dia": 26,
-    "meta_dia": 200050.57,
-    "realizado_dia": 2995.47,
-    "meta_acumulada": 2094333.5,
-    "realizado_acumulado": 689627.09,
-    "pct_atingido_acumulado": 32.92,
+    "meta_dia": 170762.72,
+    "realizado_dia": 21194.42,
+    "meta_acumulada": 2065045.66,
+    "realizado_acumulado": 707826.04,
+    "pct_atingido_acumulado": 34.27,
     "status_meta": "Abaixo da Meta"
   }
 ]
