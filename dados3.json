@@ -268,5 +268,15 @@
     "realizado_acumulado": 828536.86,
     "pct_atingido_acumulado": 37.98,
     "status_meta": "Abaixo da Meta"
+  },
+  {
+    "dt_dia": "2026-11-28",
+    "num_dia": 28,
+    "meta_dia": 72746.35,
+    "realizado_dia": 0,
+    "meta_acumulada": 2253717,
+    "realizado_acumulado": 828536.86,
+    "pct_atingido_acumulado": 36.76,
+    "status_meta": "Abaixo da Meta"
   }
 ]
